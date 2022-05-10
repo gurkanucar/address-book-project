@@ -1,14 +1,18 @@
 import React from "react";
 import "./AddressComponent.css";
-
+import { FaMapMarkedAlt } from "react-icons/fa";
 const AddressComponent = (props) => {
   const { country, city, home_address, work_address } = props.data;
 
   return (
     <div className="address__item">
       {(home_address || work_address || city || country) && (
-        <span className="address__title">Address</span>
+        <div>
+          <FaMapMarkedAlt />
+          <span className="address__title">Address</span>
+        </div>
       )}
+      <br />
       {country && (
         <h3 className="address__label">
           <strong>Country:</strong> {country}
