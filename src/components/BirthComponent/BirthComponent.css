@@ -1,7 +1,4 @@
-.birth__item {
-  display: flex;
-  flex-direction: column;
-}
+
 .birth__title {
   margin: 0 0 10px 10px;
   font-size: 22px;

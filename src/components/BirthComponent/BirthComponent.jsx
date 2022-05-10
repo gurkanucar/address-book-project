@@ -7,14 +7,14 @@ const BirthComponent = (props) => {
   const { birth_date, place_of_birth, gender } = props.data;
 
   return (
-    <div className="birth__item">
+    <div className="card-details__item">
       {(birth_date || place_of_birth || gender) && (
-        <div>
+        <div className="card-details__title">
           <FaBirthdayCake />
           <span className="birth__title">Birth</span>
         </div>
       )}
-      <br />
+ 
       {birth_date && (
         <h3 className="birth__label">
           <strong>Birth Date:</strong> {birth_date}
