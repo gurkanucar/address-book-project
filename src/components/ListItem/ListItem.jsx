@@ -5,6 +5,12 @@ import CardDetail from "../CardDetail/CardDetail";
 import Summary from "../Summary/Summary";
 
 import "./ListItem.css";
+import {
+  MdEdit,
+  MdDelete,
+  MdKeyboardArrowUp,
+  MdKeyboardArrowDown,
+} from "react-icons/md";
 
 const ListItem = (props) => {
   const { item } = props;
@@ -39,15 +45,12 @@ const ListItem = (props) => {
     place_of_birth,
   } = item;
 
-  const [className, setClassName] = useState("list-item__root");
-
-  useEffect(() => {
-    let rnd = randomNumber(1, 6);
-    setClassName(className + " bg" + rnd);
-  }, []);
-
   return (
-    <div className={className}>
+    <div className="list-item__root">
+      <div className="list-item__actions">
+        <MdEdit size={25} />
+        <MdDelete size={25} color={"#f2493d"} />
+      </div>
       <Summary data={item} />
       {expand == true ? (
         <div>
@@ -62,7 +65,7 @@ const ListItem = (props) => {
           setExpand(!expand);
         }}
       >
-        {expand == true ? "▲" : "…"}
+        {expand == true ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
       </h1>
     </div>
   );
