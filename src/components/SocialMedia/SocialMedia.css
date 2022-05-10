@@ -1,7 +1,4 @@
-.social-media__item {
-  display: flex;
-  flex-direction: column;
-}
+
 .social-media__title {
   margin: 0 0 10px 10px;
   font-size: 22px;
