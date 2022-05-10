@@ -1,5 +1,6 @@
 import React from "react";
 import "./SocialMedia.css";
+import { FaShareAlt } from "react-icons/fa";
 const SocialMedia = (props) => {
   const { instagram, facebook, linkedin, twitter, github } = props.data;
 
@@ -8,9 +9,12 @@ const SocialMedia = (props) => {
       {/* <hr className="hr"></hr> */}
 
       {(instagram || facebook || linkedin || twitter || github) && (
-        <span className="social-media__title">Social Media</span>
+        <div>
+          <FaShareAlt />
+          <span className="social-media__title">Social Media</span>
+        </div>
       )}
-
+      <br />
       {facebook && (
         <h3 className="social-media__label">
           <strong>Facebook:</strong> {facebook}
