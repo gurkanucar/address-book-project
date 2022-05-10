@@ -1,0 +1,20 @@
+.list-item__root {
+  padding: 30px 30px 30px 30px;
+  border-radius: 50px;
+  margin: 20px 10% 10px 10%;
+  background: #ecebeb;
+  box-shadow: 20px 20px 30px #bebebe, -20px -20px 30px #ffffff;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.list-item__show__more {
+  user-select: none;
+  cursor: pointer;
+  text-align: center;
+  margin: 0px;
+}
+
+.list-item__root:hover {
+  transform: scale(1.05);
+}
