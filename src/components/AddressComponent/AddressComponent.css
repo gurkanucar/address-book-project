@@ -1,16 +1,11 @@
-.address__item {
-    display: flex;
-    flex-direction: column;
-  }
-  .address__title {
-    margin: 0 0 10px 10px;
-    font-size: 22px;
-    font-weight: 700;
-  }
-  
-  .address__label {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 500;
-  }
-  
+.address__title {
+  margin: 0 0 10px 10px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.address__label {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
