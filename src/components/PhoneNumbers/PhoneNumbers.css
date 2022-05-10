@@ -1,17 +1,16 @@
-.phone-numbers__item{
-    display: flex;
-    flex-direction: column;
+.phone-numbers__item {
+  display: flex;
+  flex-direction: column;
 }
-  
-  .phone-numbers__title {
-    margin: 0 0 10px 0;
-    font-size: 22px;
-    font-weight: 700;
-  }
-  
-  .phone-numbers__label {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 500;
-  }
-  
+
+.phone-numbers__title {
+  margin: 0 0 10px 10px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.phone-numbers__label {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
