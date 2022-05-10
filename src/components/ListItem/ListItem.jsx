@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { _calculateAge } from "../../util/ageCalculator";
+import { randomNumber } from "../../util/randomGenerator";
 import CardDetail from "../CardDetail/CardDetail";
 import Summary from "../Summary/Summary";
 
@@ -38,8 +39,15 @@ const ListItem = (props) => {
     place_of_birth,
   } = item;
 
+  const [className, setClassName] = useState("list-item__root");
+
+  useEffect(() => {
+    let rnd = randomNumber(1, 6);
+    setClassName(className + " bg" + rnd);
+  }, []);
+
   return (
-    <div className="list-item__root">
+    <div className={className}>
       <Summary data={item} />
       {expand == true ? (
         <div>
