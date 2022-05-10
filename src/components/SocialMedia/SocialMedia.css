@@ -1,0 +1,15 @@
+.social-media__item {
+  display: flex;
+  flex-direction: column;
+}
+.social-media__title {
+  margin: 0 0 10px 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.social-media__label {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
