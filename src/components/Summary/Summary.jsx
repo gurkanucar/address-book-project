@@ -33,16 +33,16 @@ const Summary = (props) => {
           <span className="summary__job">{job}</span>
           <br />
           <div className="summary__row">
-            <FaPhone size={25} />
+            <FaPhone color="e48902" size={25} />
             <span className="summary__phone">{phone_number}</span>
           </div>
           <div className="summary__row">
-            <MdMail size={25} />
+            <MdMail color="e48902" size={25} />
             <span className="summary__email">{email}</span>
           </div>
-     
+
           <div className="summary__row">
-            <MdLocationPin size={25} />
+            <MdLocationPin color="e48902" size={25} />
             <span className="summary__country">
               <strong>{city}</strong>
               {",  "}
@@ -53,7 +53,7 @@ const Summary = (props) => {
         {imageUrl !== "" ? (
           <img src={imageUrl} className="summary__img" />
         ) : (
-          <FaUser size={150} />
+          <FaUser size={180} />
         )}
       </div>
     </div>
