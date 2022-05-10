@@ -1,0 +1,67 @@
+.summary__root {
+  margin-bottom: 20px;
+}
+
+.summary__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.summary__img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.summary__col {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary__name {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.summary__country {
+  font-size: 20px;
+}
+
+.summary__job {
+  font-size: 20px;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+}
+
+.summary__age {
+  font-size: 19px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.summary__phone {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+
+.summary__email {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+
+@media (max-width: 850px) {
+  .summary__body {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+}
