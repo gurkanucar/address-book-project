@@ -39,8 +39,13 @@ const CreateOrEditPage = (props) => {
   //find data if exists
   useEffect(() => {
     if (checkID()) {
-      const filtered = addresses.filter((x) => x.id == params.id);
-      setData(...filtered);
+      const id = Number(params.id);
+      const item = addresses.find((x) => x.id === id);
+      if (item === undefined) {
+        navigate("/404");
+      } else {
+        setData(item);
+      }
     }
   }, []);
 

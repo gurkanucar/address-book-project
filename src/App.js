@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CreateOrEditPage from "./pages/CreateOrEditPage/CreateOrEditPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           path="addresses/new"
           element={<CreateOrEditPage isNew={true} />}
         />
+        <Route path="404" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
