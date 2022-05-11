@@ -7,8 +7,8 @@ const NotFoundPage = () => {
 
   return (
     <div className="wrapper">
-      <div class="number">404</div>
-      <div class="text">
+      <div className="number">404</div>
+      <div className="text">
         <span>Ooops...</span>
         <br />
         Address not found !
@@ -17,11 +17,6 @@ const NotFoundPage = () => {
           home
         </h3>
       </div>
-      <a
-        class="me"
-        href="https://codepen.io/uzcho_/pens/popular/?grid_type=list"
-        target="_blank"
-      ></a>
     </div>
   );
 };
