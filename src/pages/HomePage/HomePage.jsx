@@ -1,8 +1,14 @@
 import React from "react";
 import List from "../../components/List/List";
-import { data } from "../../data/data";
+// import { data } from "../../data/data";
+
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 const HomePage = () => {
+  const dispatch = useDispatch();
+  const addressList = useSelector((state) => state.addresses.value);
+
   return (
     <div
       style={{
@@ -13,7 +19,7 @@ const HomePage = () => {
       }}
     >
       <h1>Address Book</h1>
-      <List datas={data} />
+      <List datas={addressList} />
     </div>
   );
 };
