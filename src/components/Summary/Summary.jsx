@@ -3,11 +3,13 @@ import { _calculateAge } from "../../util/ageCalculator";
 import "./Summary.css";
 import { FaPhone, FaUser } from "react-icons/fa";
 import { MdMail, MdLocationPin } from "react-icons/md";
+import { BiCategory } from "react-icons/bi";
 
 const Summary = (props) => {
   const {
     first_name,
     country,
+    category,
     city,
     last_name,
     email,
@@ -40,7 +42,10 @@ const Summary = (props) => {
             <MdMail color="e48902" size={25} />
             <span className="summary__email">{email}</span>
           </div>
-
+          <div className="summary__row">
+            <BiCategory color="e48902" size={25} />
+            <span className="summary__category">{category}</span>
+          </div>
           <div className="summary__row">
             <MdLocationPin color="e48902" size={25} />
             <span className="summary__country">

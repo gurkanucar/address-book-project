@@ -33,6 +33,12 @@
   color: #e48902;
 }
 
+.summary__category {
+  font-size: 20px;
+  margin: 0 0 10px 10px;
+  font-weight: bold;
+}
+
 .summary__country {
   margin: 0 0 0 10px;
   font-size: 20px;

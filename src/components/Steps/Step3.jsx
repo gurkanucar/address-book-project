@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { dateConverter } from "../../util/dateConverter";
 import Input from "../Input/Input";
 import { FaUser } from "react-icons/fa";
+import SelectComponent from "../SelectComponent/SelectComponent";
+
 const Step3 = (props) => {
   const { handleChange, values, errors } = props;
 
@@ -14,7 +16,7 @@ const Step3 = (props) => {
           className="summary__img"
         />
       ) : (
-        <FaUser  style={{ marginBottom: "40px" }} size={180} />
+        <FaUser style={{ marginBottom: "40px" }} size={180} />
       )}
       <div className="create-or-edit__form">
         <Input
@@ -38,7 +40,7 @@ const Step3 = (props) => {
           labelName="Family Intimacy"
         />
 
-        <Input
+        <SelectComponent
           type="text"
           name="category"
           onChange={handleChange}
@@ -47,6 +49,14 @@ const Step3 = (props) => {
           placeholder="category.."
           error={errors.category}
           labelName="Category"
+          options={[
+            { value: "family", text: "family" },
+            { value: "friend", text: "friend" },
+            { value: "job", text: "job" },
+            { value: "sport", text: "sport" },
+            { value: "school", text: "school" },
+            { value: "other", text: "other" },
+          ]}
         />
 
         <Input
