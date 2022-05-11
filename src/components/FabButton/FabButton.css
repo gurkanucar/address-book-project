@@ -51,7 +51,7 @@
   height: 220px;
 }
 .floating-container:hover .floating-button {
-  box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+  box-shadow: 0 20px 20px -10px rgba(255, 152, 0, 0.5);
   -webkit-transform: translatey(5px);
   transform: translatey(5px);
   -webkit-transition: all 0.3s;
@@ -70,7 +70,7 @@
   position: absolute;
   width: 65px;
   height: 65px;
-  background: #2cb3f0;
+ 
   bottom: 0;
   border-radius: 50%;
   left: 0;
@@ -79,8 +79,11 @@
   color: white;
   line-height: 80px;
   text-align: center;
-  z-index: 100;
-  box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
+  z-index: 100; 
+  /* background: #2cb3f0;
+  box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6); */
+  background: #f1a025;
+  box-shadow: 0 20px 20px -10px rgba(255, 152, 0, 0.5);
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -118,11 +121,11 @@
 }
 
 .floating-container .float-element:nth-child(2) {
-  background: #f1a025;
-  box-shadow: 0 20px 20px -10px rgba(255, 152, 0, 0.5);
+  background: #2cb3f0;
+  box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
 }
 
 .float-element:nth-child(2):hover {
-  background: #ff9100;
-  box-shadow: 0 20px 20px -10px rgba(255, 152, 0, 0.5);
+  background: #0382bd;
+  box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
 }
