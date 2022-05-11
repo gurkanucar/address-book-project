@@ -3,6 +3,7 @@ import "./Input.css";
 const Input = (props) => {
   const {
     labelName,
+    id,
     defaultValue,
     name,
     type,
@@ -18,12 +19,13 @@ const Input = (props) => {
         {labelName}
       </label>
       <input
+      id={id || ""}
         className="input-component__input"
-        type={type ? type : "text"}
-        name={name}
+        type={type || "text"}
+        name={name || ""}
         onChange={onChange}
-        values={value}
-        defaultValue={defaultValue}
+        value={value || ""}
+        // defaultValue={defaultValue}
         placeholder={placeholder}
       />
       <p className="input-component__error">{error ? error : " "}</p>

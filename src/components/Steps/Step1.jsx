@@ -5,15 +5,13 @@ import SelectComponent from "../SelectComponent/SelectComponent";
 const Step1 = (props) => {
   const { handleChange, values, errors } = props;
 
-  console.log(values);
-
   return (
     <div className="create-or-edit__form">
       <Input
         type="text"
         name="first_name"
         onChange={handleChange}
-        values={values.first_name}
+        value={values.first_name}
         defaultValue={values.first_name}
         placeholder="Name.."
         error={errors.first_name}
@@ -24,7 +22,7 @@ const Step1 = (props) => {
         type="text"
         name="last_name"
         onChange={handleChange}
-        values={values.last_name}
+        value={values.last_name}
         defaultValue={values.last_name}
         placeholder="Last Name.."
         error={errors.last_name}
@@ -35,7 +33,7 @@ const Step1 = (props) => {
         type="text"
         name="email"
         onChange={handleChange}
-        values={values.email}
+        value={values.email}
         placeholder="Email.."
         defaultValue={values.email}
         error={errors.email}
@@ -47,7 +45,7 @@ const Step1 = (props) => {
                 name="gender"
                 onChange={handleChange}
                 defaultValue={values.gender}
-                values={values.gender}
+                value={values.gender}
                 placeholder="Gender.."
                 error={errors.gender}
                 labelName="Gender"
@@ -58,7 +56,7 @@ const Step1 = (props) => {
         name="gender"
         onChange={handleChange}
         defaultValue={values.gender}
-        values={values.gender}
+        value={values.gender}
         placeholder="Gender.."
         error={errors.gender}
         options={[
@@ -73,7 +71,7 @@ const Step1 = (props) => {
         name="job"
         onChange={handleChange}
         defaultValue={values.job}
-        values={values.job}
+        value={values.job}
         placeholder="Job.."
         error={errors.job}
         labelName="Job"
@@ -84,7 +82,7 @@ const Step1 = (props) => {
         name="phone_number"
         onChange={handleChange}
         defaultValue={values.phone_number}
-        values={values.phone_number}
+        value={values.phone_number}
         placeholder="phone.."
         error={errors.phone_number}
         labelName="Phone Number"

@@ -11,7 +11,7 @@ const Step4 = (props) => {
         name="facebook"
         onChange={handleChange}
         defaultValue={values.facebook}
-        values={values.facebook}
+        value={values.facebook}
         placeholder="facebook.."
         error={errors.facebook}
         labelName="Facebook"
@@ -22,7 +22,7 @@ const Step4 = (props) => {
         name="instagram"
         onChange={handleChange}
         defaultValue={values.instagram}
-        values={values.instagram}
+        value={values.instagram}
         placeholder="instagram.."
         error={errors.instagram}
         labelName="Instagram"
@@ -33,7 +33,7 @@ const Step4 = (props) => {
         name="twitter"
         onChange={handleChange}
         defaultValue={values.twitter}
-        values={values.twitter}
+        value={values.twitter}
         placeholder="twitter.."
         error={errors.twitter}
         labelName="Twitter"
@@ -44,7 +44,7 @@ const Step4 = (props) => {
         name="linkedin"
         onChange={handleChange}
         defaultValue={values.linkedin}
-        values={values.linkedin}
+        value={values.linkedin}
         placeholder="linkedin.."
         error={errors.linkedin}
         labelName="LinkedIn"
@@ -55,7 +55,7 @@ const Step4 = (props) => {
         name="github"
         onChange={handleChange}
         defaultValue={values.github}
-        values={values.github}
+        value={values.github}
         placeholder="github.."
         error={errors.github}
         labelName="GitHub"

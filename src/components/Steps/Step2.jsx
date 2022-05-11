@@ -13,7 +13,7 @@ const Step2 = (props) => {
         name="work_phone_number"
         onChange={handleChange}
         defaultValue={values.work_phone_number}
-        values={values.work_phone_number}
+        value={values.work_phone_number}
         placeholder="phone.."
         error={errors.work_phone_number}
         labelName="Work Phone Number"
@@ -24,7 +24,7 @@ const Step2 = (props) => {
         name="home_phone_number"
         onChange={handleChange}
         defaultValue={values.home_phone_number}
-        values={values.home_phone_number}
+        value={values.home_phone_number}
         placeholder="phone.."
         error={errors.home_phone_number}
         labelName="Home Phone Number"
@@ -35,7 +35,7 @@ const Step2 = (props) => {
       name="country"
       onChange={handleChange}
       defaultValue={values.country}
-      values={values.country}
+      value={values.country}
       placeholder="country.."
       error={errors.country}
       labelName="Country"
@@ -46,7 +46,7 @@ const Step2 = (props) => {
         name="country"
         onChange={handleChange}
         defaultValue={values.country}
-        values={values.country}
+        value={values.country}
         placeholder="country.."
         error={errors.country}
         options={countries}
@@ -58,7 +58,7 @@ const Step2 = (props) => {
         name="city"
         onChange={handleChange}
         defaultValue={values.city}
-        values={values.city}
+        value={values.city}
         placeholder="city.."
         error={errors.city}
         labelName="City"
@@ -68,7 +68,7 @@ const Step2 = (props) => {
         name="home_address"
         onChange={handleChange}
         defaultValue={values.home_address}
-        values={values.home_address}
+        value={values.home_address}
         placeholder="home_address.."
         error={errors.home_address}
         labelName="Home Address"
@@ -79,7 +79,7 @@ const Step2 = (props) => {
         name="work_address"
         onChange={handleChange}
         defaultValue={values.work_address}
-        values={values.work_address}
+        value={values.work_address}
         placeholder="work_address.."
         error={errors.work_address}
         labelName="Work Address"
