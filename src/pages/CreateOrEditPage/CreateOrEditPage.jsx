@@ -10,6 +10,8 @@ import { useFormik } from "formik";
 //yup for validation scheme
 import * as Yup from "yup";
 import Input from "../../components/Input/Input";
+import SelectComponent from "../../components/SelectComponent/SelectComponent";
+import { countries } from "../../data/Countries";
 
 const validationSchema = Yup.object({
   first_name: Yup.string().required("Zorunlu alan"),
@@ -51,7 +53,7 @@ const CreateOrEditPage = (props) => {
 
   const { handleSubmit, handleChange, values, errors } = useFormik({
     initialValues: {
-      first_name: "",
+      first_name: "asd",
       last_name: "",
       email: "",
       gender: "male",
@@ -127,6 +129,7 @@ const CreateOrEditPage = (props) => {
                 name="first_name"
                 onChange={handleChange}
                 values={values.first_name}
+                defaultValue={values.first_name}
                 placeholder="Name.."
                 error={errors.first_name}
                 labelName="First Name"
@@ -137,6 +140,7 @@ const CreateOrEditPage = (props) => {
                 name="last_name"
                 onChange={handleChange}
                 values={values.last_name}
+                defaultValue={values.last_name}
                 placeholder="Last Name.."
                 error={errors.last_name}
                 labelName="Last Name"
@@ -148,17 +152,34 @@ const CreateOrEditPage = (props) => {
                 onChange={handleChange}
                 values={values.email}
                 placeholder="Email.."
+                defaultValue={values.email}
                 error={errors.email}
                 labelName="E-mail"
               />
 
-              <Input
+              {/* <Input
                 type="text"
                 name="gender"
                 onChange={handleChange}
+                defaultValue={values.gender}
                 values={values.gender}
                 placeholder="Gender.."
                 error={errors.gender}
+                labelName="Gender"
+              /> */}
+
+              <SelectComponent
+                type="text"
+                name="gender"
+                onChange={handleChange}
+                defaultValue={values.gender}
+                values={values.gender}
+                placeholder="Gender.."
+                error={errors.gender}
+                options={[
+                  { value: "male", text: "Male" },
+                  { value: "female", text: "Female" },
+                ]}
                 labelName="Gender"
               />
 
@@ -166,6 +187,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="job"
                 onChange={handleChange}
+                defaultValue={values.job}
                 values={values.job}
                 placeholder="Job.."
                 error={errors.job}
@@ -176,6 +198,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="phone_number"
                 onChange={handleChange}
+                defaultValue={values.phone_number}
                 values={values.phone_number}
                 placeholder="phone.."
                 error={errors.phone_number}
@@ -190,6 +213,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="work_phone_number"
                 onChange={handleChange}
+                defaultValue={values.work_phone_number}
                 values={values.work_phone_number}
                 placeholder="phone.."
                 error={errors.work_phone_number}
@@ -200,19 +224,33 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="home_phone_number"
                 onChange={handleChange}
+                defaultValue={values.home_phone_number}
                 values={values.home_phone_number}
                 placeholder="phone.."
                 error={errors.home_phone_number}
                 labelName="Home Phone Number"
               />
 
-              <Input
+              {/* <Input
                 type="text"
                 name="country"
                 onChange={handleChange}
+                defaultValue={values.country}
                 values={values.country}
                 placeholder="country.."
                 error={errors.country}
+                labelName="Country"
+              /> */}
+
+              <SelectComponent
+                type="text"
+                name="country"
+                onChange={handleChange}
+                defaultValue={values.country}
+                values={values.country}
+                placeholder="country.."
+                error={errors.country}
+                options={countries}
                 labelName="Country"
               />
 
@@ -220,6 +258,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="city"
                 onChange={handleChange}
+                defaultValue={values.city}
                 values={values.city}
                 placeholder="city.."
                 error={errors.city}
@@ -229,6 +268,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="home_address"
                 onChange={handleChange}
+                defaultValue={values.home_address}
                 values={values.home_address}
                 placeholder="home_address.."
                 error={errors.home_address}
@@ -239,6 +279,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="work_address"
                 onChange={handleChange}
+                defaultValue={values.work_address}
                 values={values.work_address}
                 placeholder="work_address.."
                 error={errors.work_address}
@@ -253,6 +294,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="family_intimacy"
                 onChange={handleChange}
+                defaultValue={values.family_intimacy}
                 values={values.family_intimacy}
                 placeholder="family_intimacy.."
                 error={errors.family_intimacy}
@@ -263,6 +305,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="category"
                 onChange={handleChange}
+                defaultValue={values.category}
                 values={values.category}
                 placeholder="category.."
                 error={errors.category}
@@ -273,6 +316,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="place_of_birth"
                 onChange={handleChange}
+                defaultValue={values.place_of_birth}
                 values={values.place_of_birth}
                 placeholder="place_of_birth.."
                 error={errors.place_of_birth}
@@ -283,6 +327,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="imageUrl"
                 onChange={handleChange}
+                defaultValue={values.imageUrl}
                 values={values.imageUrl}
                 placeholder="imageUrl.."
                 error={errors.imageUrl}
@@ -297,6 +342,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="facebook"
                 onChange={handleChange}
+                defaultValue={values.facebook}
                 values={values.facebook}
                 placeholder="facebook.."
                 error={errors.facebook}
@@ -307,6 +353,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="instagram"
                 onChange={handleChange}
+                defaultValue={values.instagram}
                 values={values.instagram}
                 placeholder="instagram.."
                 error={errors.instagram}
@@ -317,6 +364,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="twitter"
                 onChange={handleChange}
+                defaultValue={values.twitter}
                 values={values.twitter}
                 placeholder="twitter.."
                 error={errors.twitter}
@@ -327,6 +375,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="linkedin"
                 onChange={handleChange}
+                defaultValue={values.linkedin}
                 values={values.linkedin}
                 placeholder="linkedin.."
                 error={errors.linkedin}
@@ -337,6 +386,7 @@ const CreateOrEditPage = (props) => {
                 type="text"
                 name="github"
                 onChange={handleChange}
+                defaultValue={values.github}
                 values={values.github}
                 placeholder="github.."
                 error={errors.github}
