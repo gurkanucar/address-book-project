@@ -5,14 +5,9 @@ import CardDetail from "../CardDetail/CardDetail";
 import Summary from "../Summary/Summary";
 
 import "./ListItem.css";
-import {
-  MdEdit,
-  MdDelete,
-  MdKeyboardArrowUp,
-  MdKeyboardArrowDown,
-} from "react-icons/md";
-import { useNavigate } from "react-router-dom";
-import AlertModal from "../AlertModal/AlertModal";
+
+import ItemActions from "../ItemActions/ItemActions";
+import ShowMoreComponent from "../ShowMoreComponent/ShowMoreComponent";
 
 const ListItem = (props) => {
   const { item, setIsAlertModalOpen, setId } = props;
@@ -20,42 +15,18 @@ const ListItem = (props) => {
   const [expand, setExpand] = useState(false);
 
   const { id } = item;
-  let navigate = useNavigate();
 
   return (
     <div className="list-item__root">
-      <div className="list-item__actions">
-        <MdEdit
-          onClick={() => {
-            navigate("addresses/edit/" + id);
-          }}
-          size={25}
-        />
-        <MdDelete
-          onClick={() => {
-            setIsAlertModalOpen(true);
-            setId(id);
-          }}
-          size={25}
-          color={"#f2493d"}
-        />
-      </div>
+      <ItemActions
+        id={id}
+        setIsAlertModalOpen={setIsAlertModalOpen}
+        setId={setId}
+      />
       <Summary data={item} />
-      {expand == true ? (
-        <div>
-          <hr className="hr"></hr>
-          <CardDetail data={item} />
-        </div>
-      ) : null}
+      <CardDetail data={item} expand={expand} />
 
-      <h1
-        className="list-item__show__more"
-        onClick={() => {
-          setExpand(!expand);
-        }}
-      >
-        {expand == true ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
-      </h1>
+      <ShowMoreComponent setExpand={setExpand} expand={expand} />
     </div>
   );
 };

@@ -18,22 +18,9 @@
   color: white;
 }
 
-.list-item__show__more {
-  user-select: none;
-  cursor: pointer;
-  text-align: center;
-  margin-top: 20px;
-}
+
 
 .list-item__root:hover {
   transform: scale(1.06);
 }
 
-.list-item__actions {
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin: 10px 10px 30px 10px;
-  gap: 20px;
-}
