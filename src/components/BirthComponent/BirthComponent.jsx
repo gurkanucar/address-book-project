@@ -14,15 +14,15 @@ const BirthComponent = (props) => {
           <span className="birth__title">Birth</span>
         </div>
       )}
- 
+
       {birth_date && (
         <h3 className="birth__label">
-          <strong>Birth Date:</strong> {birth_date}
+          <strong>Birth Date:</strong> {birth_date.toLocaleDateString("en-US")}
         </h3>
       )}
       {birth_date && (
         <h3 className="birth__label">
-          <strong>Age:</strong> {_calculateAge(new Date(birth_date))}
+          <strong>Age:</strong> {_calculateAge(birth_date)}
         </h3>
       )}
       {place_of_birth && (
