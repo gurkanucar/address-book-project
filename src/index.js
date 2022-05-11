@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-
 //redux
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
@@ -17,6 +16,10 @@ const store = configureStore({
   reducer: {
     addresses: addressReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 root.render(
