@@ -1,6 +1,7 @@
 import React from "react";
 import ListItem from "../ListItem/ListItem";
-import "./List.css"
+import "./List.css";
+
 const List = (props) => {
   const { datas } = props;
   console.log(datas);
