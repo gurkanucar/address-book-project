@@ -16,7 +16,7 @@ const AlertModal = ({ setIsAlertModalOpen, id }) => {
       <div className="alert-modal__centered">
         <div className="alert-modal__modal">
           <div className="alert-modal__modalHeader">
-            <h5 className="alert-modal__heading">Dialog</h5>
+            <h5 className="alert-modal__heading">ALERT !</h5>
           </div>
           <div className="alert-modal__modalContent">
             Are you sure you want to delete the item?
