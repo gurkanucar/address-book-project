@@ -5,12 +5,6 @@ import Input from "../Input/Input";
 const Step3 = (props) => {
   const { handleChange, values, errors } = props;
 
-  useEffect(() => {
-    // document.getElementById("birth_date").value = dateConverter(
-    //   values.birth_date ? values.birth_date : new Date().toString()
-    // );
-  }, []);
-
   return (
     <div className="create-or-edit__form">
       <Input
@@ -50,12 +44,10 @@ const Step3 = (props) => {
         type="date"
         name="birth_date"
         id="birth_date"
-        // onChange={(e) => {
-        //   e.target.value = dateConverter(e.target.value);
-        //   handleChange(e);
-        // }}
-        // onChange={handleChange}
-        defaultValue={values.birth_date}
+        defaultValue={dateConverter(
+          values.birth_date ? values.birth_date : new Date().toString()
+        )}
+        onChange={handleChange}
         value={dateConverter(
           values.birth_date ? values.birth_date : new Date().toString()
         )}
