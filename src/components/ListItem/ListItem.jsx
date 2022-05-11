@@ -11,44 +11,25 @@ import {
   MdKeyboardArrowUp,
   MdKeyboardArrowDown,
 } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const ListItem = (props) => {
   const { item } = props;
 
   const [expand, setExpand] = useState(false);
 
-  const {
-    id,
-    first_name,
-    last_name,
-    email,
-    gender,
-    job,
-    phone_number,
-    work_phone_number,
-    home_phone_number,
-    country,
-    city,
-    home_address,
-    work_address,
-    facebook,
-    instagram,
-    twitter,
-    linkedin,
-    github,
-    family_intimacy,
-    category,
-    created,
-    color,
-    birth_date,
-    imageUrl,
-    place_of_birth,
-  } = item;
+  const { id } = item;
+  let navigate = useNavigate();
 
   return (
     <div className="list-item__root">
       <div className="list-item__actions">
-        <MdEdit size={25} />
+        <MdEdit
+          onClick={() => {
+            navigate("addresses/edit/" + id);
+          }}
+          size={25}
+        />
         <MdDelete size={25} color={"#f2493d"} />
       </div>
       <Summary data={item} />
