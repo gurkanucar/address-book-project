@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./CreateOrEditPage.css";
 
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import "./CreateOrEditPage.css";
 
@@ -22,6 +22,8 @@ const CreateOrEditPage = (props) => {
   let params = useParams();
   const dispatch = useDispatch();
   const addresses = useSelector((state) => state.addresses.value);
+
+  let navigate = useNavigate();
 
   const max = 4;
   const [step, setStep] = useState(1);
@@ -50,7 +52,9 @@ const CreateOrEditPage = (props) => {
         CreateOrEditPage {props.isNew == true ? "NEW" : "EDIT " + params.id}
       </span>
       <button
-        onClick={() => stepHandler(-1, max, step, setStep)}
+        onClick={() => {
+          navigate("/");
+        }}
         className="create-or-edit__cancel__btn"
       >
         {"x"}
