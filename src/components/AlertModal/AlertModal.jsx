@@ -7,7 +7,6 @@ const AlertModal = ({ setIsAlertModalOpen, id }) => {
   const dispatch = useDispatch();
 
   const onDeleteClick = () => {
-    console.log(id);
     dispatch(deleteRecord({ id: id }));
   };
 
