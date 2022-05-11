@@ -18,6 +18,9 @@ import { validationSchema } from "../../util/validationSchema";
 import { newRecord } from "../../data/newRecord";
 import { stepHandler } from "../../util/stepHandler";
 
+import { addRecord, updateRecord } from "../../reducer/Addresses";
+import { generateId } from "../../util/generateId";
+
 const CreateOrEditPage = (props) => {
   let params = useParams();
   const dispatch = useDispatch();
@@ -27,22 +30,37 @@ const CreateOrEditPage = (props) => {
 
   const max = 4;
   const [step, setStep] = useState(1);
-  const [existingData, setExistingData] = useState();
+  const [data, setData] = useState(newRecord);
+
+  const checkID = () => {
+    return params.id !== null && params.id !== undefined;
+  };
 
   //find data if exists
   useEffect(() => {
-    if (params.id !== null && params.id !== undefined) {
-      const tmp = addresses.filter((x) => x.id == params.id);
-      setExistingData(...tmp);
+    if (checkID()) {
+      const filtered = addresses.filter((x) => x.id == params.id);
+      setData(...filtered);
     }
   }, []);
 
   const { handleSubmit, handleChange, values, errors } = useFormik({
     enableReinitialize: true,
-    initialValues: existingData ? existingData : newRecord,
+    initialValues: data,
     validationSchema: validationSchema,
     onSubmit: (values) => {
       console.log(values);
+      if (checkID()) {
+        dispatch(updateRecord({ id: Number(params.id), values: values }));
+      } else {
+        dispatch(
+          addRecord({
+            id: generateId(addresses),
+            ...values,
+          })
+        );
+      }
+      navigate("/");
     },
   });
 
@@ -66,7 +84,6 @@ const CreateOrEditPage = (props) => {
         >
           {"<"}
         </button>
-
         <form>
           {step == 1 ? (
             <Step1
