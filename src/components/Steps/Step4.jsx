@@ -1,0 +1,67 @@
+import React from "react";
+import Input from "../Input/Input";
+
+const Step4 = (props) => {
+  const { handleChange, values, errors } = props;
+
+  return (
+    <div className="create-or-edit__form">
+      <Input
+        type="text"
+        name="facebook"
+        onChange={handleChange}
+        defaultValue={values.facebook}
+        values={values.facebook}
+        placeholder="facebook.."
+        error={errors.facebook}
+        labelName="Facebook"
+      />
+
+      <Input
+        type="text"
+        name="instagram"
+        onChange={handleChange}
+        defaultValue={values.instagram}
+        values={values.instagram}
+        placeholder="instagram.."
+        error={errors.instagram}
+        labelName="Instagram"
+      />
+
+      <Input
+        type="text"
+        name="twitter"
+        onChange={handleChange}
+        defaultValue={values.twitter}
+        values={values.twitter}
+        placeholder="twitter.."
+        error={errors.twitter}
+        labelName="Twitter"
+      />
+
+      <Input
+        type="text"
+        name="linkedin"
+        onChange={handleChange}
+        defaultValue={values.linkedin}
+        values={values.linkedin}
+        placeholder="linkedin.."
+        error={errors.linkedin}
+        labelName="LinkedIn"
+      />
+
+      <Input
+        type="text"
+        name="github"
+        onChange={handleChange}
+        defaultValue={values.github}
+        values={values.github}
+        placeholder="github.."
+        error={errors.github}
+        labelName="GitHub"
+      />
+    </div>
+  );
+};
+
+export default Step4;
