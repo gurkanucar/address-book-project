@@ -1,5 +1,6 @@
 .create-or-edit__btn {
   width: 100%;
+  user-select: none;
   background-color: #4caf50;
   color: white;
   padding: 14px 20px;
@@ -18,11 +19,42 @@
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-  margin: 5%;
+  margin: 2%;
   border-radius: 25px;
   display: flex;
   gap: 20px;
   flex-direction: column;
+}
+
+.create-or-edit__step {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-or-edit__step__btn {
+  cursor: pointer;
+}
+
+.create-or-edit__step__btn:hover {
+  color: #231b8b !important;
+}
+
+.create-or-edit__step__text {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.create-or-edit__cancel__btn {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.create-or-edit__cancel__btn:hover {
+  color: #bd1e1e !important;
 }
 
 .create-or-edit__form {
@@ -34,42 +66,9 @@
   align-items: center;
 }
 
-.create-or-edit__step {
+.create-or-edit__form__col {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-
-.create-or-edit__step__btn {
-  width: 50px;
-  height: 100px;
-  background-color: #4b45a0;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.create-or-edit__step__btn:hover {
-  background-color: #231b8b;
-}
-
-.create-or-edit__cancel__btn {
-  width: 4%;
-  background-color: #f02b2b;
-  color: white;
-  padding: 14px 20px;
-  margin-left: auto;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.create-or-edit__cancel__btn:hover {
-  background-color: #bd1e1e;
 }

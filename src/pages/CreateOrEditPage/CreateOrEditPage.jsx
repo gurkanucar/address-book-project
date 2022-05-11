@@ -10,16 +10,16 @@ import { useFormik } from "formik";
 //yup for validation scheme
 import * as Yup from "yup";
 
-import Step1 from "../../components/Steps/Step1";
-import Step2 from "../../components/Steps/Step2";
-import Step3 from "../../components/Steps/Step3";
-import Step4 from "../../components/Steps/Step4";
 import { validationSchema } from "../../util/validationSchema";
 import { newRecord } from "../../data/newRecord";
 import { stepHandler } from "../../util/stepHandler";
 
 import { addRecord, updateRecord } from "../../reducer/Addresses";
 import { generateId } from "../../util/generateId";
+import MainForm from "../../components/Steps/MainForm";
+
+import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
+import { MdCancel } from "react-icons/md";
 
 const CreateOrEditPage = (props) => {
   let params = useParams();
@@ -66,67 +66,42 @@ const CreateOrEditPage = (props) => {
 
   return (
     <div className="create-or-edit__div">
-      <span>
+      {/* <span>
         CreateOrEditPage {props.isNew == true ? "NEW" : "EDIT " + params.id}
-      </span>
-      <button
+      </span> */}
+      <span className="create-or-edit__step__text"> {step}</span>
+
+      <MdCancel
+        className="create-or-edit__cancel__btn"
+        size={50}
         onClick={() => {
           navigate("/");
         }}
-        className="create-or-edit__cancel__btn"
-      >
-        {"x"}
-      </button>
+        color="#f02b2b"
+      />
+
       <div className="create-or-edit__step">
-        <button
+        <BsCaretLeftFill
+          size={80}
+          className="create-or-edit__step__btn"
           onClick={() => stepHandler(-1, max, step, setStep)}
+          color="#4b45a0"
+        />
+
+        <MainForm
+          handleChange={handleChange}
+          values={values}
+          errors={errors}
+          step={step}
+        />
+
+        <BsCaretRightFill
+          size={80}
           className="create-or-edit__step__btn"
-        >
-          {"<"}
-        </button>
-        <form>
-          {step == 1 ? (
-            <Step1
-              handleChange={handleChange}
-              values={values}
-              errors={errors}
-            />
-          ) : null}
-
-          {step == 2 ? (
-            <Step2
-              handleChange={handleChange}
-              values={values}
-              errors={errors}
-            />
-          ) : null}
-
-          {step == 3 ? (
-            <Step3
-              handleChange={handleChange}
-              values={values}
-              errors={errors}
-            />
-          ) : null}
-
-          {step == 4 ? (
-            <Step4
-              handleChange={handleChange}
-              values={values}
-              errors={errors}
-            />
-          ) : null}
-        </form>
-
-        <button
           onClick={() => stepHandler(1, max, step, setStep)}
-          className="create-or-edit__step__btn"
-        >
-          {">"}
-        </button>
+          color="#4b45a0"
+        />
       </div>
-
-      <h1>{step}</h1>
 
       <button
         onClick={handleSubmit}
