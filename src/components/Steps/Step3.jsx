@@ -64,13 +64,9 @@ const Step3 = (props) => {
           type="date"
           name="birth_date"
           id="birth_date"
-          defaultValue={dateConverter(
-            values.birth_date ? values.birth_date : new Date().toString()
-          )}
+          defaultValue={dateConverter(values.birth_date)}
           onChange={handleChange}
-          value={dateConverter(
-            values.birth_date ? values.birth_date : new Date().toString()
-          )}
+          value={dateConverter(values.birth_date)}
           placeholder="birth_date.."
           error={errors.birth_date}
           labelName="Birth Date"

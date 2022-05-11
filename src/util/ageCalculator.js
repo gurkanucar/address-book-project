@@ -1,5 +1,5 @@
 export const _calculateAge = (birthday) => {
-  var ageDifMs = Date.now() - birthday.getTime();
+  var ageDifMs = Date.now() - new Date(birthday).getTime();
   var ageDate = new Date(ageDifMs);
   return Math.abs(ageDate.getUTCFullYear() - 1970);
 };
