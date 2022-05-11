@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import "./AlertModal.css";
-import { deleteRecord } from "../../reducer/Addresses";
+import { deleteRecord } from "../../store/addresses";
 
 const AlertModal = ({ setIsAlertModalOpen, id }) => {
   const dispatch = useDispatch();

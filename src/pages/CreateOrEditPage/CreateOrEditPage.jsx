@@ -14,7 +14,7 @@ import { validationSchema } from "../../util/validationSchema";
 import { newRecord } from "../../data/newRecord";
 import { stepHandler } from "../../util/stepHandler";
 
-import { addRecord, updateRecord } from "../../reducer/Addresses";
+import { addRecord, updateRecord } from "../../store/addresses";
 import { generateId } from "../../util/generateId";
 import MainForm from "../../components/Steps/MainForm";
 

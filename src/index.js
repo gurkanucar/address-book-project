@@ -8,19 +8,10 @@ import reportWebVitals from "./reportWebVitals";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 
-import addressReducer from "./reducer/Addresses";
+import addressReducer from "./store/addresses";
+import store from "./store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-const store = configureStore({
-  reducer: {
-    addresses: addressReducer,
-  },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: false,
-    }),
-});
 
 root.render(
   <React.StrictMode>
