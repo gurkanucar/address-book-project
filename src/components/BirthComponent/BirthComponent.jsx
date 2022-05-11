@@ -8,13 +8,10 @@ const BirthComponent = (props) => {
 
   return (
     <div className="card-details__item">
-      {(birth_date || place_of_birth || gender) && (
-        <div className="card-details__title">
-          <FaBirthdayCake />
-          <span className="birth__title">Birth</span>
-        </div>
-      )}
-
+      <div className="card-details__title">
+        <FaBirthdayCake />
+        <span className="birth__title">Birth</span>
+      </div>
       {birth_date && (
         <h3 className="birth__label">
           <strong>Birth Date:</strong> {birth_date.toLocaleDateString("en-US")}

@@ -6,13 +6,11 @@ const AddressComponent = (props) => {
 
   return (
     <div className="card-details__item">
-      {(home_address || work_address || city || country) && (
-        <div  className="card-details__title">
-          <FaMapMarkedAlt />
-          <span className="address__title">Address</span>
-        </div>
-      )}
-     
+      <div className="card-details__title">
+        <FaMapMarkedAlt />
+        <span className="address__title">Address</span>
+      </div>
+
       {country && (
         <h3 className="address__label">
           <strong>Country:</strong> {country}

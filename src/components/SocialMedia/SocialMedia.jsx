@@ -8,12 +8,10 @@ const SocialMedia = (props) => {
     <div className="card-details__item">
       {/* <hr className="hr"></hr> */}
 
-      {(instagram || facebook || linkedin || twitter || github) && (
-        <div className="card-details__title">
-          <FaShareAlt />
-          <span className="social-media__title">Social Media</span>
-        </div>
-      )}
+      <div className="card-details__title">
+        <FaShareAlt />
+        <span className="social-media__title">Social Media</span>
+      </div>
 
       {facebook && (
         <h3 className="social-media__label">

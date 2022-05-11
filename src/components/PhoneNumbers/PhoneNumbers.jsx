@@ -5,27 +5,25 @@ const PhoneNumbers = (props) => {
   const { home_phone_number, work_phone_number, phone_number } = props.data;
 
   return (
-    (home_phone_number || work_phone_number) && (
-      <div className="card-details__item">
-        {
-          <div className="card-details__title">
-            <FaPhone />
-            <span className="phone-numbers__title">Phones</span>
-          </div>
-        }
-    
-        {home_phone_number && (
-          <h3 className="phone-numbers__label">
-            <strong>Home:</strong> {home_phone_number}
-          </h3>
-        )}
-        {work_phone_number && (
-          <h3 className="phone-numbers__label">
-            <strong>Work:</strong> {work_phone_number}
-          </h3>
-        )}
-      </div>
-    )
+    <div className="card-details__item">
+      {
+        <div className="card-details__title">
+          <FaPhone />
+          <span className="phone-numbers__title">Phones</span>
+        </div>
+      }
+
+      {home_phone_number && (
+        <h3 className="phone-numbers__label">
+          <strong>Home:</strong> {home_phone_number}
+        </h3>
+      )}
+      {work_phone_number && (
+        <h3 className="phone-numbers__label">
+          <strong>Work:</strong> {work_phone_number}
+        </h3>
+      )}
+    </div>
   );
 };
 
