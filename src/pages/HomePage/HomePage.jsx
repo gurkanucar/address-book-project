@@ -4,6 +4,7 @@ import List from "../../components/List/List";
 
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import FabButton from "../../components/FabButton/FabButton";
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const HomePage = () => {
     >
       <h1>Address Book</h1>
       <List datas={addressList} />
+      <FabButton />
     </div>
   );
 };
