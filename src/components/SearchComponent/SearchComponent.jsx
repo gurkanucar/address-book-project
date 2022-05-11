@@ -19,7 +19,6 @@ const SearchComponent = (props) => {
     { value: "", text: "" },
     { value: "male", text: "male" },
     { value: "female", text: "female" },
-    { value: "male", text: "male" },
   ];
   const categoryOptions = [
     { value: "", text: "" },
@@ -71,8 +70,8 @@ const SearchComponent = (props) => {
       </select>
 
       <select
-        onChange={(e) => setGender(e.target.value.toLowerCase())}
-        value={gender}
+        onChange={(e) => setCategory(e.target.value.toLowerCase())}
+        value={category}
         className="input-component__input"
       >
         {categoryOptions.map((x, index) => {
