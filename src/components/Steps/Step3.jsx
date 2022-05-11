@@ -14,7 +14,7 @@ const Step3 = (props) => {
           className="summary__img"
         />
       ) : (
-        <FaUser size={180} />
+        <FaUser  style={{ marginBottom: "40px" }} size={180} />
       )}
       <div className="create-or-edit__form">
         <Input
