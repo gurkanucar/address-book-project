@@ -22,7 +22,7 @@ export const newRecord = () => {
     category: "other",
     created: new Date(),
     color: "",
-    birth_date: "",
+    birth_date: new Date(),
     place_of_birth: "",
     imageUrl: "",
   };
