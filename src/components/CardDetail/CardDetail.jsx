@@ -12,17 +12,19 @@ import SocialMedia from "../SocialMedia/SocialMedia";
 import "./CardDetail.css";
 
 const CardDetail = (props) => {
-  const { data } = props;
+  const { data, expand } = props;
 
-  return (
-    <div className="card-detail__root">
-      {/* <hr className="hr"></hr> */}
-      {checkPhoneNumbers(data) && <PhoneNumbers data={data} />}
-      {checkSocialMedias(data) && <SocialMedia data={data} />}
-      {checkAddresses(data) && <AddressComponent data={data} />}
-      {checkBirth(data) && <BirthComponent data={data} />}
+  return expand == true ? (
+    <div>
+      <hr className="hr"></hr>
+      <div className="card-detail__root">
+        {checkPhoneNumbers(data) && <PhoneNumbers data={data} />}
+        {checkSocialMedias(data) && <SocialMedia data={data} />}
+        {checkAddresses(data) && <AddressComponent data={data} />}
+        {checkBirth(data) && <BirthComponent data={data} />}
+      </div>
     </div>
-  );
+  ) : null;
 };
 
 export default CardDetail;
