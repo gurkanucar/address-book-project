@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./SearchComponent.css";
-import Input from "../Input/Input";
 import { countries } from "../../data/Countries";
 import ShowMoreComponent from "../ShowMoreComponent/ShowMoreComponent";
 const SearchComponent = (props) => {
@@ -30,6 +29,8 @@ const SearchComponent = (props) => {
     { value: "other", text: "other" },
   ];
 
+  const countryOptions = [{ value: "", text: "" }, ...countries];
+
   const [expand, setExpand] = useState(false);
 
   return (
@@ -42,11 +43,11 @@ const SearchComponent = (props) => {
       />
 
       <select
-        onChange={(e) => setCountry(e.target.value.toLowerCase())}
+        onChange={(e) => setCountry(e.target.value)}
         value={country}
         className="input-component__input"
       >
-        {countries.map((x, index) => {
+        {countryOptions.map((x, index) => {
           return (
             <option key={index} value={x.value}>
               {x.text}
