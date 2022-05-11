@@ -7,7 +7,9 @@ export const addressesSlice = createSlice({
   initialState: { value: data },
   reducers: {
     addRecord: (state, action) => {
-      state.value.push(action.payload);
+      let temp = state.value;
+      temp.push(action.payload);
+      state.value = temp;
     },
 
     deleteRecord: (state, action) => {
@@ -15,11 +17,13 @@ export const addressesSlice = createSlice({
     },
 
     updateRecord: (state, action) => {
-      state.value.map((x) => {
+      state.value = state.value.map((x) => {
+        let temp = x;
         if (x.id === action.payload.id) {
-          //   Update operation
-          //   user.username = action.payload.username;
+          const updatedData = action.payload.values;
+          temp = { ...updatedData };
         }
+        return temp;
       });
     },
   },
