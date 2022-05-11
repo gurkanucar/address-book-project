@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CreateOrEditPage.css";
 
 import { useParams } from "react-router-dom";
@@ -45,6 +45,10 @@ const validationSchema = Yup.object({
 const CreateOrEditPage = (props) => {
   let params = useParams();
 
+  const max = 4;
+
+  const [step, setStep] = useState(1);
+
   const { handleSubmit, handleChange, values, errors } = useFormik({
     initialValues: {
       first_name: "",
@@ -78,222 +82,280 @@ const CreateOrEditPage = (props) => {
     },
   });
 
+  const stepHandler = (val) => {
+    if (val == -1) {
+      if (step > 1) {
+        let tmp = step - 1;
+        setStep(tmp);
+      } else {
+        setStep(max);
+      }
+    } else if (val == 1) {
+      if (step < max) {
+        let tmp = step + 1;
+        setStep(tmp);
+      } else {
+        setStep(1);
+      }
+    }
+  };
+
   return (
     <div className="create-or-edit__div">
       <span>
         CreateOrEditPage {props.isNew == true ? "NEW" : "EDIT " + params.id}
       </span>
-      <form className="create-or-edit__form">
-        <Input
-          type="text"
-          name="first_name"
-          onChange={handleChange}
-          values={values.first_name}
-          placeholder="Name.."
-          error={errors.first_name}
-          labelName="First Name"
-        />
+      <button
+        onClick={() => stepHandler(-1)}
+        className="create-or-edit__cancel__btn"
+      >
+        {"x"}
+      </button>
+      <div className="create-or-edit__step">
+        <button
+          onClick={() => stepHandler(-1)}
+          className="create-or-edit__step__btn"
+        >
+          {"<"}
+        </button>
 
-        <Input
-          type="text"
-          name="last_name"
-          onChange={handleChange}
-          values={values.last_name}
-          placeholder="Last Name.."
-          error={errors.last_name}
-          labelName="Last Name"
-        />
+        <form>
+          {step == 1 ? (
+            <div className="create-or-edit__form">
+              <Input
+                type="text"
+                name="first_name"
+                onChange={handleChange}
+                values={values.first_name}
+                placeholder="Name.."
+                error={errors.first_name}
+                labelName="First Name"
+              />
 
-        <Input
-          type="text"
-          name="email"
-          onChange={handleChange}
-          values={values.email}
-          placeholder="Email.."
-          error={errors.email}
-          labelName="E-mail"
-        />
+              <Input
+                type="text"
+                name="last_name"
+                onChange={handleChange}
+                values={values.last_name}
+                placeholder="Last Name.."
+                error={errors.last_name}
+                labelName="Last Name"
+              />
 
-        <Input
-          type="text"
-          name="gender"
-          onChange={handleChange}
-          values={values.gender}
-          placeholder="Gender.."
-          error={errors.gender}
-          labelName="Gender"
-        />
+              <Input
+                type="text"
+                name="email"
+                onChange={handleChange}
+                values={values.email}
+                placeholder="Email.."
+                error={errors.email}
+                labelName="E-mail"
+              />
 
-        <Input
-          type="text"
-          name="job"
-          onChange={handleChange}
-          values={values.job}
-          placeholder="Job.."
-          error={errors.job}
-          labelName="Job"
-        />
+              <Input
+                type="text"
+                name="gender"
+                onChange={handleChange}
+                values={values.gender}
+                placeholder="Gender.."
+                error={errors.gender}
+                labelName="Gender"
+              />
 
-        <Input
-          type="text"
-          name="phone_number"
-          onChange={handleChange}
-          values={values.phone_number}
-          placeholder="phone.."
-          error={errors.phone_number}
-          labelName="Phone Number"
-        />
+              <Input
+                type="text"
+                name="job"
+                onChange={handleChange}
+                values={values.job}
+                placeholder="Job.."
+                error={errors.job}
+                labelName="Job"
+              />
 
-        <Input
-          type="text"
-          name="work_phone_number"
-          onChange={handleChange}
-          values={values.work_phone_number}
-          placeholder="phone.."
-          error={errors.work_phone_number}
-          labelName="Work Phone Number"
-        />
+              <Input
+                type="text"
+                name="phone_number"
+                onChange={handleChange}
+                values={values.phone_number}
+                placeholder="phone.."
+                error={errors.phone_number}
+                labelName="Phone Number"
+              />
+            </div>
+          ) : null}
 
-        <Input
-          type="text"
-          name="home_phone_number"
-          onChange={handleChange}
-          values={values.home_phone_number}
-          placeholder="phone.."
-          error={errors.home_phone_number}
-          labelName="Home Phone Number"
-        />
+          {step == 2 ? (
+            <div className="create-or-edit__form">
+              <Input
+                type="text"
+                name="work_phone_number"
+                onChange={handleChange}
+                values={values.work_phone_number}
+                placeholder="phone.."
+                error={errors.work_phone_number}
+                labelName="Work Phone Number"
+              />
 
-        <Input
-          type="text"
-          name="country"
-          onChange={handleChange}
-          values={values.country}
-          placeholder="country.."
-          error={errors.country}
-          labelName="Country"
-        />
+              <Input
+                type="text"
+                name="home_phone_number"
+                onChange={handleChange}
+                values={values.home_phone_number}
+                placeholder="phone.."
+                error={errors.home_phone_number}
+                labelName="Home Phone Number"
+              />
 
-        <Input
-          type="text"
-          name="city"
-          onChange={handleChange}
-          values={values.city}
-          placeholder="city.."
-          error={errors.city}
-          labelName="City"
-        />
+              <Input
+                type="text"
+                name="country"
+                onChange={handleChange}
+                values={values.country}
+                placeholder="country.."
+                error={errors.country}
+                labelName="Country"
+              />
 
-        <Input
-          type="text"
-          name="home_address"
-          onChange={handleChange}
-          values={values.home_address}
-          placeholder="home_address.."
-          error={errors.home_address}
-          labelName="Home Address"
-        />
+              <Input
+                type="text"
+                name="city"
+                onChange={handleChange}
+                values={values.city}
+                placeholder="city.."
+                error={errors.city}
+                labelName="City"
+              />
+              <Input
+                type="text"
+                name="home_address"
+                onChange={handleChange}
+                values={values.home_address}
+                placeholder="home_address.."
+                error={errors.home_address}
+                labelName="Home Address"
+              />
 
-        <Input
-          type="text"
-          name="work_address"
-          onChange={handleChange}
-          values={values.work_address}
-          placeholder="work_address.."
-          error={errors.work_address}
-          labelName="Work Address"
-        />
+              <Input
+                type="text"
+                name="work_address"
+                onChange={handleChange}
+                values={values.work_address}
+                placeholder="work_address.."
+                error={errors.work_address}
+                labelName="Work Address"
+              />
+            </div>
+          ) : null}
 
-        <Input
-          type="text"
-          name="facebook"
-          onChange={handleChange}
-          values={values.facebook}
-          placeholder="facebook.."
-          error={errors.facebook}
-          labelName="Facebook"
-        />
+          {step == 3 ? (
+            <div className="create-or-edit__form">
+              <Input
+                type="text"
+                name="family_intimacy"
+                onChange={handleChange}
+                values={values.family_intimacy}
+                placeholder="family_intimacy.."
+                error={errors.family_intimacy}
+                labelName="Family Intimacy"
+              />
 
-        <Input
-          type="text"
-          name="instagram"
-          onChange={handleChange}
-          values={values.instagram}
-          placeholder="instagram.."
-          error={errors.instagram}
-          labelName="Instagram"
-        />
+              <Input
+                type="text"
+                name="category"
+                onChange={handleChange}
+                values={values.category}
+                placeholder="category.."
+                error={errors.category}
+                labelName="Category"
+              />
 
-        <Input
-          type="text"
-          name="twitter"
-          onChange={handleChange}
-          values={values.twitter}
-          placeholder="twitter.."
-          error={errors.twitter}
-          labelName="Twitter"
-        />
+              <Input
+                type="text"
+                name="place_of_birth"
+                onChange={handleChange}
+                values={values.place_of_birth}
+                placeholder="place_of_birth.."
+                error={errors.place_of_birth}
+                labelName="Place Of Birth"
+              />
 
-        <Input
-          type="text"
-          name="linkedin"
-          onChange={handleChange}
-          values={values.linkedin}
-          placeholder="linkedin.."
-          error={errors.linkedin}
-          labelName="LinkedIn"
-        />
+              <Input
+                type="text"
+                name="imageUrl"
+                onChange={handleChange}
+                values={values.imageUrl}
+                placeholder="imageUrl.."
+                error={errors.imageUrl}
+                labelName="Image Url"
+              />
+            </div>
+          ) : null}
 
-        <Input
-          type="text"
-          name="github"
-          onChange={handleChange}
-          values={values.github}
-          placeholder="github.."
-          error={errors.github}
-          labelName="GitHub"
-        />
+          {step == 4 ? (
+            <div className="create-or-edit__form">
+              <Input
+                type="text"
+                name="facebook"
+                onChange={handleChange}
+                values={values.facebook}
+                placeholder="facebook.."
+                error={errors.facebook}
+                labelName="Facebook"
+              />
 
-        <Input
-          type="text"
-          name="family_intimacy"
-          onChange={handleChange}
-          values={values.family_intimacy}
-          placeholder="family_intimacy.."
-          error={errors.family_intimacy}
-          labelName="Family Intimacy"
-        />
+              <Input
+                type="text"
+                name="instagram"
+                onChange={handleChange}
+                values={values.instagram}
+                placeholder="instagram.."
+                error={errors.instagram}
+                labelName="Instagram"
+              />
 
-        <Input
-          type="text"
-          name="category"
-          onChange={handleChange}
-          values={values.category}
-          placeholder="category.."
-          error={errors.category}
-          labelName="Category"
-        />
+              <Input
+                type="text"
+                name="twitter"
+                onChange={handleChange}
+                values={values.twitter}
+                placeholder="twitter.."
+                error={errors.twitter}
+                labelName="Twitter"
+              />
 
-        <Input
-          type="text"
-          name="place_of_birth"
-          onChange={handleChange}
-          values={values.place_of_birth}
-          placeholder="place_of_birth.."
-          error={errors.place_of_birth}
-          labelName="Place Of Birth"
-        />
+              <Input
+                type="text"
+                name="linkedin"
+                onChange={handleChange}
+                values={values.linkedin}
+                placeholder="linkedin.."
+                error={errors.linkedin}
+                labelName="LinkedIn"
+              />
 
-        <Input
-          type="text"
-          name="imageUrl"
-          onChange={handleChange}
-          values={values.imageUrl}
-          placeholder="imageUrl.."
-          error={errors.imageUrl}
-          labelName="Image Url"
-        />
-      </form>
+              <Input
+                type="text"
+                name="github"
+                onChange={handleChange}
+                values={values.github}
+                placeholder="github.."
+                error={errors.github}
+                labelName="GitHub"
+              />
+            </div>
+          ) : null}
+        </form>
+
+        <button
+          onClick={() => stepHandler(1)}
+          className="create-or-edit__step__btn"
+        >
+          {">"}
+        </button>
+      </div>
+
+      <h1>{step}</h1>
+
       <button
         onClick={handleSubmit}
         className="create-or-edit__btn"
