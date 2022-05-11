@@ -22,6 +22,7 @@ const SelectComponent = (props) => {
       </label>
       <select
         onChange={onChange}
+        value={value}
         className="input-component__input"
         name={name}
       >
