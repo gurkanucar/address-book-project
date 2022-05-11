@@ -13,7 +13,7 @@
   margin: 20px 10% 10px 10%;
 
   background: rgb(34, 34, 34);
-  box-shadow: rgba(228, 137, 2, 0.616) 10px 10px 3px;
+  box-shadow: #e489029d 10px 10px 3px;
   transition: all 0.2s ease-in-out;
   color: white;
 }
