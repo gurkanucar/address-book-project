@@ -12,9 +12,10 @@ import {
   MdKeyboardArrowDown,
 } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import AlertModal from "../AlertModal/AlertModal";
 
 const ListItem = (props) => {
-  const { item } = props;
+  const { item, setIsAlertModalOpen, setId } = props;
 
   const [expand, setExpand] = useState(false);
 
@@ -30,7 +31,14 @@ const ListItem = (props) => {
           }}
           size={25}
         />
-        <MdDelete size={25} color={"#f2493d"} />
+        <MdDelete
+          onClick={() => {
+            setIsAlertModalOpen(true);
+            setId(id);
+          }}
+          size={25}
+          color={"#f2493d"}
+        />
       </div>
       <Summary data={item} />
       {expand == true ? (
