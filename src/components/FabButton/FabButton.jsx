@@ -4,19 +4,36 @@ import "./FabButton.css";
 import { BiExport } from "react-icons/bi";
 import { IoMdAdd } from "react-icons/io";
 import { FiMousePointer } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { csvExport } from "../../util/csvExport";
 
 const FabButton = () => {
+  let navigate = useNavigate();
+
+  const addressList = useSelector((state) => state.addresses.value);
+
   return (
     <div>
-      <div class="floating-container">
-        <div class="floating-button">
+      <div className="floating-container">
+        <div className="floating-button">
           <FiMousePointer size={30} />
         </div>
-        <div class="element-container">
-          <span class="float-element">
+        <div className="element-container">
+          <span
+            onClick={() => {
+              csvExport(addressList);
+            }}
+            className="float-element"
+          >
             <BiExport size={25} />
           </span>
-          <span class="float-element">
+          <span
+            onClick={() => {
+              navigate("/addresses/new");
+            }}
+            className="float-element"
+          >
             <IoMdAdd size={25} />
           </span>
         </div>
