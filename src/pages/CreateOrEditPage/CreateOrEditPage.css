@@ -1,7 +1,7 @@
 .create-or-edit__btn {
   width: 100%;
   user-select: none;
-  background-color: #4caf50;
+  background-color: #f09814;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -12,7 +12,7 @@
 }
 
 .create-or-edit__btn:hover {
-  background-color: #45a049;
+  background-color: #d68307;
 }
 
 .create-or-edit__div {
@@ -35,10 +35,11 @@
 
 .create-or-edit__step__btn {
   cursor: pointer;
+  color: #f09814 !important;
 }
 
 .create-or-edit__step__btn:hover {
-  color: #231b8b !important;
+  color: #d68307 !important;
 }
 
 .create-or-edit__step__text {
