@@ -1,0 +1,28 @@
+.input-component__item {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.input-component__input {
+  padding: 15px;
+  margin: 15px 0 0 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.input-component__label {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.input-component__error {
+  color: red;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: end;
+  white-space: pre;
+}
