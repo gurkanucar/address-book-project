@@ -42,7 +42,9 @@ const DetailPage = (props) => {
       </div>
 
       <div className="details-page__root">
-        {data?.imageUrl !== "" ? (
+      
+      <div className="details-page__img">
+      {data?.imageUrl !== "" ? (
           <img
             src={data?.imageUrl}
             style={{ height: 250, width: 250 }}
@@ -51,6 +53,7 @@ const DetailPage = (props) => {
         ) : (
           <FaUser style={{ marginBottom: "40px" }} size={250} />
         )}
+      </div>
 
         <div className="details-page__card__list">
           <div className="details-page__card">
@@ -182,13 +185,13 @@ const DetailPage = (props) => {
           <div className="details-page__card">
             {data?.category && (
               <div className="details-page__item">
-                <span className="details-page__title">category:</span>
+                <span className="details-page__title">Category:</span>
                 <span className="details-page__value">{data?.category}</span>
               </div>
             )}
             {data?.created && (
               <div className="details-page__item">
-                <span className="details-page__title">created:</span>
+                <span className="details-page__title">Created:</span>
                 <span className="details-page__value">
                   {dateConverterFormatted(data?.created)}
                 </span>
@@ -196,13 +199,13 @@ const DetailPage = (props) => {
             )}
             {data?.nick_name && (
               <div className="details-page__item">
-                <span className="details-page__title">nick_name:</span>
+                <span className="details-page__title">Nick Name:</span>
                 <span className="details-page__value">{data?.nick_name}</span>
               </div>
             )}
             {data?.birth_date && (
               <div className="details-page__item">
-                <span className="details-page__title">birth_date:</span>
+                <span className="details-page__title">Birth Date:</span>
                 <span className="details-page__value">
                   {dateConverterFormatted(data?.birth_date)}
                 </span>
@@ -210,7 +213,7 @@ const DetailPage = (props) => {
             )}
             {data?.place_of_birth && (
               <div className="details-page__item">
-                <span className="details-page__title">place_of_birth:</span>
+                <span className="details-page__title">Place of Birth:</span>
                 <span className="details-page__value">
                   {data?.place_of_birth}
                 </span>

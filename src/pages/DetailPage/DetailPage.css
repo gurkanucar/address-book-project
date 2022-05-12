@@ -35,6 +35,19 @@
   background-color: rgb(44, 44, 44);
   flex-direction: column;
   width: 40%;
+  transition: all 0.2s ease-in-out;
+}
+
+.details-page__card:hover {
+  transform: scale(1.05);
+}
+
+.details-page__img {
+  transition: all 0.2s ease-in-out;
+}
+
+.details-page__img:hover {
+  transform: scale(1.2);
 }
 
 .details-page__card__list {
@@ -44,6 +57,7 @@
   align-items: stretch;
   flex-wrap: wrap;
   margin: 50px;
+  gap: 30px;
 }
 
 .details-page__item {
