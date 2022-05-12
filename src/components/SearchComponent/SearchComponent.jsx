@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./SearchComponent.css";
 import { countries } from "../../data/Countries";
 import ShowMoreComponent from "../ShowMoreComponent/ShowMoreComponent";
+import FilterComponent from "../FilterComponent/FilterComponent";
+import Input from "../Input/Input";
 const SearchComponent = (props) => {
   const {
     searchedText,
@@ -12,79 +14,44 @@ const SearchComponent = (props) => {
     setCountry,
     gender,
     setGender,
+    setRestricted,
   } = props;
-
-  const genderOptions = [
-    { value: "", text: "" },
-    { value: "male", text: "male" },
-    { value: "female", text: "female" },
-  ];
-  const categoryOptions = [
-    { value: "", text: "" },
-    { value: "family", text: "family" },
-    { value: "friend", text: "friend" },
-    { value: "job", text: "job" },
-    { value: "sport", text: "sport" },
-    { value: "school", text: "school" },
-    { value: "other", text: "other" },
-  ];
-
-  const countryOptions = [{ value: "", text: "" }, ...countries];
 
   const [expand, setExpand] = useState(false);
 
+  useEffect(() => {
+    setRestricted(!expand);
+  }, [expand]);
+
   return (
     <div className="search-component__div">
-      <input
-        className="input-component__input"
+      <Input
+        className="search-component__input"
+        type="text"
+        name="search"
         value={searchedText}
         onChange={(e) => setSearchedText(e.target.value.toLowerCase())}
-        placeholder="words.."
+        placeholder="search something.."
+        labelName="Search"
       />
 
-      <select
-        onChange={(e) => setCountry(e.target.value)}
-        value={country}
-        className="input-component__input"
-      >
-        {countryOptions.map((x, index) => {
-          return (
-            <option key={index} value={x.value}>
-              {x.text}
-            </option>
-          );
-        })}
-      </select>
+      <FilterComponent
+        expand={expand}
+        searchedText={searchedText}
+        setSearchedText={setSearchedText}
+        country={country}
+        setCountry={setCountry}
+        category={category}
+        setCategory={setCategory}
+        gender={gender}
+        setGender={setGender}
+      />
 
-      <select
-        onChange={(e) => setGender(e.target.value.toLowerCase())}
-        value={gender}
-        className="input-component__input"
-      >
-        {genderOptions.map((x, index) => {
-          return (
-            <option key={index} value={x.value}>
-              {x.text}
-            </option>
-          );
-        })}
-      </select>
-
-      <select
-        onChange={(e) => setCategory(e.target.value.toLowerCase())}
-        value={category}
-        className="input-component__input"
-      >
-        {categoryOptions.map((x, index) => {
-          return (
-            <option key={index} value={x.value}>
-              {x.text}
-            </option>
-          );
-        })}
-      </select>
-
-      <ShowMoreComponent setExpand={setExpand} expand={expand} />
+      <ShowMoreComponent
+        className="search-component__show__more"
+        setExpand={setExpand}
+        expand={expand}
+      />
     </div>
   );
 };
