@@ -13,7 +13,7 @@ const NotFoundPage = () => {
         <br />
         Address not found !
         <br />
-        <h3 onClick={() => navigate("/")} className="redirect-home">
+        <h3 onClick={() => navigate("/home")} className="redirect-home">
           home
         </h3>
       </div>

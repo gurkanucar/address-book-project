@@ -60,7 +60,7 @@
   cursor: pointer;
   font-size: 25px;
   color: #fff;
-  background-color: #f09001;
+  background-color: #f1ab28;
   padding: 15px 1px 15px 1px;
   border-radius: 20px;
 }
@@ -68,8 +68,6 @@
 .redirect-home:hover {
   text-align: center;
   cursor: pointer;
-  color: #f09001;
-  background-color: #fff;
-  border: solid 1px #f09001;
+  background-color: #f09001;
   border-radius: 20px;
 }
