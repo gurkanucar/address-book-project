@@ -16,7 +16,7 @@ const HomePage = () => {
   const [gender, setGender] = useState("");
   const [country, setCountry] = useState("");
 
-  const [including, setIncluding] = useState(false);
+  const [restricted, setRestricted] = useState(false);
 
   return (
     <div
@@ -37,11 +37,12 @@ const HomePage = () => {
         setCategory={setCategory}
         gender={gender}
         setGender={setGender}
+        setRestricted={setRestricted}
       />
       <List
         datas={
-          including == true
-            ? searchFilter(addressList, searchedText, category, country, gender)
+          restricted == true
+            ? searchFilter(addressList, searchedText)
             : searchFilterRestrict(
                 addressList,
                 searchedText,
