@@ -1,10 +1,23 @@
-# Address Book React Final Project
+# Address Book React - Final Project
 
 #### Gurkan UCAR
 #### Trakya University, Computer Engineering
 
 &nbsp;
-&nbsp;
+
+
+### Used Packages
+
+**Redux:** for global state management
+
+**Formik:** it helps to manage multiple inputs in form 
+
+**Yup:** for validation schemas 
+
+**React Icons:** there many icon in this package 
+
+**React Router:** You can navigate your pages using this package
+
 &nbsp;
 
 ### How to run
@@ -55,3 +68,4 @@
 ![example](./images/ex8.png)
 
 ![example](./images/ex9.png)
+
