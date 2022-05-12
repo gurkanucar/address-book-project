@@ -12,7 +12,7 @@ const ItemActions = (props) => {
       <div className="item__actions">
         <MdEdit
           onClick={() => {
-            navigate("addresses/edit/" + id);
+            navigate("/addresses/edit/" + id);
           }}
           size={25}
         />

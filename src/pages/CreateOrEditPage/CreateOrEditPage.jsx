@@ -65,7 +65,7 @@ const CreateOrEditPage = (props) => {
           })
         );
       }
-      navigate("/");
+      navigate("/home");
     },
   });
 
@@ -80,7 +80,7 @@ const CreateOrEditPage = (props) => {
         className="create-or-edit__cancel__btn"
         size={50}
         onClick={() => {
-          navigate("/");
+          navigate("/home");
         }}
         color="#f02b2b"
       />
