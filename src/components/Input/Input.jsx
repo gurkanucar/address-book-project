@@ -4,6 +4,7 @@ const Input = (props) => {
   const {
     labelName,
     id,
+    className,
     defaultValue,
     name,
     type,
@@ -14,12 +15,12 @@ const Input = (props) => {
   } = props;
 
   return (
-    <div className="input-component__item">
+    <div className={className || "input-component__item"}>
       <label className="input-component__label" htmlFor={name}>
         {labelName}
       </label>
       <input
-      id={id || ""}
+        id={id || ""}
         className="input-component__input"
         type={type || "text"}
         name={name || ""}
@@ -28,7 +29,9 @@ const Input = (props) => {
         // defaultValue={defaultValue}
         placeholder={placeholder}
       />
-      <p className="input-component__error">{error ? error : " "}</p>
+      {error === undefined ? null : (
+        <p className="input-component__error">{error ? error : " "}</p>
+      )}
     </div>
   );
 };
