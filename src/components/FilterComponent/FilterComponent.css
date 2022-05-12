@@ -3,5 +3,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 50px;
+}
+
+.filter-component__item {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-width: 350px;
 }
