@@ -35,6 +35,7 @@ function App() {
             path="/addresses/new"
             element={<CreateOrEditPage isNew={true} />}
           />
+          <Route path="/addresses/details/:id" element={<DetailPage />} />
         </Route>
         <Route path="/login" element={<LoginPage />} />
       </Routes>
