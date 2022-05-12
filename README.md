@@ -28,7 +28,11 @@
   npm start
 ```
 
-
+#### User credentials for testing
+```bash
+   username: grkn
+   password: pass
+```
 
 
 
