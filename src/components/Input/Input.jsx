@@ -11,6 +11,7 @@ const Input = (props) => {
     onChange,
     value,
     placeholder,
+    hideError,
     error,
   } = props;
 
@@ -29,7 +30,7 @@ const Input = (props) => {
         // defaultValue={defaultValue}
         placeholder={placeholder}
       />
-      {error === undefined ? null : (
+      {hideError === true ? null : (
         <p className="input-component__error">{error ? error : " "}</p>
       )}
     </div>
