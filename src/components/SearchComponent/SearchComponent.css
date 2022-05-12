@@ -1,7 +1,7 @@
 .search-component__div {
-  width: 80%;
+  width: 79%;
   background-color: #e4e4e4;
-  padding: 10px 5% 10px 5%;
+  padding: 10px 10px 10px 10px;
   margin: 20px;
   border-radius: 20px;
   display: flex;
@@ -14,7 +14,7 @@
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
   min-width: 300px;
 }
 

@@ -33,6 +33,7 @@ const SearchComponent = (props) => {
         onChange={(e) => setSearchedText(e.target.value.toLowerCase())}
         placeholder="search something.."
         labelName="Search"
+        hideError={true}
       />
 
       <FilterComponent
