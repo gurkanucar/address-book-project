@@ -14,7 +14,7 @@
 
 **Yup:** for validation schemas 
 
-**React Icons:** there many icon in this package 
+**React Icons:** there are many icons in this package 
 
 **React Router:** You can navigate your pages using this package
 
