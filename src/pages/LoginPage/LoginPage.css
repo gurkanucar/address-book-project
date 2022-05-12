@@ -27,3 +27,13 @@
 .login-page__login__btn:hover {
   background-color: #d68307;
 }
+
+.login-page__title {
+  margin-bottom: 50px;
+}
+
+.login-page__error {
+  color: #ff2d2d;
+  font-weight: 700;
+  margin: 0 0 40px 0;
+}

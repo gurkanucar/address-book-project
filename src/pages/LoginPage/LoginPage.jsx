@@ -6,7 +6,7 @@ import { login } from "../../store/auth";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 const LoginPage = () => {
-  const loggedIn = useSelector((state) => state.auth.loggedIn);
+  const err = useSelector((state) => state.auth.value.loggedInError);
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -21,8 +21,8 @@ const LoginPage = () => {
 
   return (
     <div className="login-page__div">
-      <h1>Login</h1>
-      <br />
+      <h1 className="login-page__title">Address Book Login</h1>
+
       <Input
         type="text"
         name="username"
@@ -45,6 +45,7 @@ const LoginPage = () => {
         placeholder="password.."
         labelName="Password"
       />
+      {err !== "" ? <h3 className="login-page__error">{err}</h3> : <h3></h3>}
       <button
         onClick={loginHandler}
         className="login-page__login__btn"

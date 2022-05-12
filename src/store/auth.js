@@ -5,14 +5,27 @@ export const authSlice = createSlice({
   initialState: {
     value: {
       isLoggedIn: false,
+      loggedInError: "",
     },
   },
   reducers: {
     login: (state, action) => {
       // state.value = state.value.filter((x) => x.id !== action.payload.id);
-      if (action.payload.username === "a" && action.payload.password === "a") {
-        state.value.isLoggedIn = true;
+      if (
+        action.payload.username === "grkn" &&
+        action.payload.password === "pass"
+      ) {
+        state.value = { isLoggedIn: true, loggedInError: "" };
         console.log("login successfull", state.value.isLoggedIn);
+      } else {
+        state.value = {
+          isLoggedIn: false,
+          loggedInError: "Username or Password is wrong!",
+        };
+        console.log(
+          "Username or Password is wrong!",
+          state.value.loggedInError
+        );
       }
     },
   },
