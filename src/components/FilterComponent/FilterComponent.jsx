@@ -36,7 +36,7 @@ const FilterComponent = (props) => {
     expand && (
       <div className="filter-component__div">
         <SelectComponent
-        className="filter-component__item"
+          className="filter-component__item"
           type="text"
           name="country"
           onChange={(e) => setCountry(e.target.value)}
@@ -46,7 +46,7 @@ const FilterComponent = (props) => {
         />
 
         <SelectComponent
-         className="filter-component__item"
+          className="filter-component__item"
           type="text"
           name="gender"
           onChange={(e) => setGender(e.target.value.toLowerCase())}
@@ -56,7 +56,7 @@ const FilterComponent = (props) => {
         />
 
         <SelectComponent
-         className="filter-component__item"
+          className="filter-component__item"
           type="text"
           name="category"
           onChange={(e) => setCategory(e.target.value.toLowerCase())}

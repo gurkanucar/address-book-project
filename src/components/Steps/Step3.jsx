@@ -81,6 +81,16 @@ const Step3 = (props) => {
           error={errors.birth_date}
           labelName="Birth Date"
         />
+        <Input
+          type="text"
+          name="nick_name"
+          onChange={handleChange}
+          defaultValue={values.nick_name}
+          value={values.nick_name}
+          placeholder="nick name.."
+          error={errors.nick_name}
+          labelName="Nick Name"
+        />
       </div>
     </div>
   );

@@ -22,6 +22,7 @@ export const newRecord = () => {
     category: "other",
     created: new Date(),
     color: "",
+    nick_name: "",
     birth_date: new Date(),
     place_of_birth: "",
     imageUrl: "",

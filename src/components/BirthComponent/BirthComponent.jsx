@@ -8,7 +8,7 @@ import {
 } from "../../util/dateConverter";
 
 const BirthComponent = (props) => {
-  const { birth_date, place_of_birth, gender } = props.data;
+  const { birth_date, place_of_birth, gender, nick_name } = props.data;
 
   return (
     <div className="card-details__item">
@@ -34,6 +34,11 @@ const BirthComponent = (props) => {
       {gender && (
         <h3 className="birth__label">
           <strong>Gender:</strong> {gender}
+        </h3>
+      )}
+      {nick_name && (
+        <h3 className="birth__label">
+          <strong>Nick:</strong> {nick_name}
         </h3>
       )}
     </div>

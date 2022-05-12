@@ -4,7 +4,6 @@ export const searchFilter = (arr, text) => {
 };
 
 export const searchFilterRestrict = (arr, text, category, country, gender) => {
-  console.log(arr);
   console.log("restrict filter", text, category, country, gender);
   return arr.filter(
     (x) =>
@@ -29,6 +28,7 @@ const textSearch = (x, text) => {
     x.work_address.toLowerCase().includes(text) ||
     x.facebook.toLowerCase().includes(text) ||
     x.instagram.toLowerCase().includes(text) ||
-    x.twitter.toLowerCase().includes(text)
+    x.twitter.toLowerCase().includes(text) ||
+    x.nick_name.toLowerCase().includes(text)
   );
 };
