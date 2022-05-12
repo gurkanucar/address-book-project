@@ -9,21 +9,38 @@ const MainForm = (props) => {
   return (
     <div>
       <form>
-        {step == 1 ? (
-          <Step1 handleChange={handleChange} values={values} errors={errors} />
-        ) : null}
-
-        {step == 2 ? (
-          <Step2 handleChange={handleChange} values={values} errors={errors} />
-        ) : null}
-
-        {step == 3 ? (
-          <Step3 handleChange={handleChange} values={values} errors={errors} />
-        ) : null}
-
-        {step == 4 ? (
-          <Step4 handleChange={handleChange} values={values} errors={errors} />
-        ) : null}
+        {
+          {
+            1: (
+              <Step1
+                handleChange={handleChange}
+                values={values}
+                errors={errors}
+              />
+            ),
+            2: (
+              <Step2
+                handleChange={handleChange}
+                values={values}
+                errors={errors}
+              />
+            ),
+            3: (
+              <Step3
+                handleChange={handleChange}
+                values={values}
+                errors={errors}
+              />
+            ),
+            4: (
+              <Step4
+                handleChange={handleChange}
+                values={values}
+                errors={errors}
+              />
+            ),
+          }[step]
+        }
       </form>
     </div>
   );
