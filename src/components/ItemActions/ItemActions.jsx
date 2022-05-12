@@ -4,12 +4,21 @@ import "./ItemActions.css";
 
 import { MdEdit, MdDelete } from "react-icons/md";
 
+import { BiShow } from "react-icons/bi";
+
 const ItemActions = (props) => {
   const { id, setId, setIsAlertModalOpen } = props;
   let navigate = useNavigate();
   return (
     <div>
       <div className="item__actions">
+        <BiShow
+          color="e48902"
+          onClick={() => {
+            navigate("/addresses/details/" + id);
+          }}
+          size={25}
+        />
         <MdEdit
           onClick={() => {
             navigate("/addresses/edit/" + id);
