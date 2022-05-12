@@ -23,7 +23,7 @@ export const data = [
     created: new Date("5-11-2022"),
     color: "",
     nick_name: "usta",
-    birth_date: new Date("05-13-1968"),
+    birth_date: new Date("7-13-1968"),
     place_of_birth: "Kayseri",
     imageUrl:
       "https://pbs.twimg.com/profile_images/1232374207729799170/IqtUTP4s_400x400.jpg",
