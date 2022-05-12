@@ -9,6 +9,7 @@ const SelectComponent = (props) => {
     onChange,
     value,
     placeholder,
+    className,
     error,
     options,
   } = props;
@@ -16,7 +17,7 @@ const SelectComponent = (props) => {
   // options =[{value:"val",text:"text"},{value:"val",text:"text"},]
 
   return (
-    <div className="input-component__item">
+    <div className={className || "input-component__item"}>
       <label className="input-component__label" htmlFor={name}>
         {labelName}
       </label>
