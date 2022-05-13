@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { URL_PREFIX } from "../../constants";
 import "./NotFoundPage.css";
 
 const NotFoundPage = () => {
