@@ -7,6 +7,7 @@ import { FiMousePointer } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { csvExport } from "../../util/csvExport";
+import { URL_PREFIX } from "../../constants";
 
 const FabButton = () => {
   let navigate = useNavigate();
@@ -30,7 +31,7 @@ const FabButton = () => {
           </span>
           <span
             onClick={() => {
-              navigate("/addresses/new");
+              navigate(URL_PREFIX+"/addresses/new");
             }}
             className="float-element"
           >

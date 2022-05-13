@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { dateConverterFormatted } from "../../util/dateConverter";
 import "./DetailPage.css";
 import { FaUser, FaChevronCircleLeft } from "react-icons/fa";
+import { URL_PREFIX } from "../../constants";
 
 const DetailPage = (props) => {
   let params = useParams();
@@ -23,7 +24,7 @@ const DetailPage = (props) => {
       const id = Number(params.id);
       const item = addresses.find((x) => x.id === id);
       if (item === undefined) {
-        navigate("/404");
+        navigate(URL_PREFIX+"/404");
       } else {
         setData(item);
       }
@@ -35,7 +36,7 @@ const DetailPage = (props) => {
       <div
         className="details-page__back"
         onClick={() => {
-          navigate("/home");
+          navigate(URL_PREFIX+"/home");
         }}
       >
         <FaChevronCircleLeft size={40} />
