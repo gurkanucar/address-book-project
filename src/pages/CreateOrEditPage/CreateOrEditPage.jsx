@@ -20,7 +20,7 @@ import MainForm from "../../components/Steps/MainForm";
 
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 import { MdCancel } from "react-icons/md";
-import { URL_PREFIX } from "../../constants";
+
 
 const CreateOrEditPage = (props) => {
   let params = useParams();
@@ -43,7 +43,7 @@ const CreateOrEditPage = (props) => {
       const id = Number(params.id);
       const item = addresses.find((x) => x.id === id);
       if (item === undefined) {
-        navigate(URL_PREFIX+"/404");
+        navigate("/404");
       } else {
         setData(item);
       }
@@ -66,7 +66,7 @@ const CreateOrEditPage = (props) => {
           })
         );
       }
-      navigate(URL_PREFIX+"/home");
+      navigate("/home");
     },
   });
 
@@ -81,7 +81,7 @@ const CreateOrEditPage = (props) => {
         className="create-or-edit__cancel__btn"
         size={50}
         onClick={() => {
-          navigate(URL_PREFIX+"/home");
+          navigate("/home");
         }}
         color="#f02b2b"
       />

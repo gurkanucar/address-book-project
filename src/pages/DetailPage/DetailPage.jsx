@@ -4,7 +4,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { dateConverterFormatted } from "../../util/dateConverter";
 import "./DetailPage.css";
 import { FaUser, FaChevronCircleLeft } from "react-icons/fa";
-import { URL_PREFIX } from "../../constants";
 
 const DetailPage = (props) => {
   let params = useParams();
@@ -24,7 +23,8 @@ const DetailPage = (props) => {
       const id = Number(params.id);
       const item = addresses.find((x) => x.id === id);
       if (item === undefined) {
-        navigate(URL_PREFIX+"/404");
+        console.log("not found!");
+        navigate("/404");
       } else {
         setData(item);
       }
@@ -36,25 +36,24 @@ const DetailPage = (props) => {
       <div
         className="details-page__back"
         onClick={() => {
-          navigate(URL_PREFIX+"/home");
+          navigate("/home");
         }}
       >
         <FaChevronCircleLeft size={40} />
       </div>
 
       <div className="details-page__root">
-      
-      <div className="details-page__img">
-      {data?.imageUrl !== "" ? (
-          <img
-            src={data?.imageUrl}
-            style={{ height: 250, width: 250 }}
-            className="summary__img"
-          />
-        ) : (
-          <FaUser style={{ marginBottom: "40px" }} size={250} />
-        )}
-      </div>
+        <div className="details-page__img">
+          {data?.imageUrl !== "" ? (
+            <img
+              src={data?.imageUrl}
+              style={{ height: 250, width: 250 }}
+              className="summary__img"
+            />
+          ) : (
+            <FaUser style={{ marginBottom: "40px" }} size={250} />
+          )}
+        </div>
 
         <div className="details-page__card__list">
           <div className="details-page__card">

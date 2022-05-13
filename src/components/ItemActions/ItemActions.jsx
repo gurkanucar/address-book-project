@@ -5,7 +5,6 @@ import "./ItemActions.css";
 import { MdEdit, MdDelete } from "react-icons/md";
 
 import { BiShow } from "react-icons/bi";
-import { URL_PREFIX } from "../../constants";
 
 const ItemActions = (props) => {
   const { id, setId, setIsAlertModalOpen } = props;
@@ -16,13 +15,13 @@ const ItemActions = (props) => {
         <BiShow
           color="e48902"
           onClick={() => {
-            navigate(URL_PREFIX+"/addresses/details/" + id);
+            navigate("/addresses/details/" + id);
           }}
           size={25}
         />
         <MdEdit
           onClick={() => {
-            navigate(URL_PREFIX+"/addresses/edit/" + id);
+            navigate("/addresses/edit/" + id);
           }}
           size={25}
         />

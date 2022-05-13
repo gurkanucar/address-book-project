@@ -10,6 +10,7 @@ import {
   Navigate,
   Outlet,
   useLocation,
+  HashRouter,
 } from "react-router-dom";
 import CreateOrEditPage from "./pages/CreateOrEditPage/CreateOrEditPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
@@ -20,7 +21,7 @@ import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
-    <BrowserRouter basename="/address-book-project">
+    <HashRouter>
       <Routes>
         <Route path="*" element={<NotFoundPage />} />
         <Route path={"/"} element={<PrivateRoute />}>
@@ -37,7 +38,7 @@ function App() {
         </Route>
         <Route path="/login" element={<LoginPage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

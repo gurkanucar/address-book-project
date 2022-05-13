@@ -5,7 +5,7 @@ import "./LoginPage.css";
 import { login } from "../../store/auth";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { URL_PREFIX } from "../../constants";
+
 const LoginPage = () => {
   const err = useSelector((state) => state.auth.value.loggedInError);
 
@@ -17,7 +17,7 @@ const LoginPage = () => {
 
   const loginHandler = () => {
     dispatch(login({ username, password }));
-    navigate(URL_PREFIX+"/home");
+    navigate("/home");
   };
 
   return (
