@@ -1,1 +1,1 @@
-export const URL_PREFIX = "/address-book-project";
+export const URL_PREFIX = "";

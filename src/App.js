@@ -20,25 +20,22 @@ import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/address-book-project">
       <Routes>
-        <Route path="/address-book-project/*" element={<NotFoundPage />} />
-        <Route path={"/address-book-project/"} element={<PrivateRoute />}>
-          <Route path="/address-book-project/home" element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
+        <Route path={"/"} element={<PrivateRoute />}>
+          <Route path="/home" element={<HomePage />} />
           <Route
-            path="/address-book-project/addresses/edit/:id"
+            path="/addresses/edit/:id"
             element={<CreateOrEditPage isNew={false} />}
           />
           <Route
-            path="/address-book-project/addresses/new"
+            path="/addresses/new"
             element={<CreateOrEditPage isNew={true} />}
           />
-          <Route
-            path="/address-book-project/addresses/details/:id"
-            element={<DetailPage />}
-          />
+          <Route path="/addresses/details/:id" element={<DetailPage />} />
         </Route>
-        <Route path="/address-book-project/login" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );
