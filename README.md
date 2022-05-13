@@ -78,3 +78,5 @@
 ![example](./images/ex8.png)
 
 ![example](./images/ex9.png)
+
+![example](./images/ex10.png)
