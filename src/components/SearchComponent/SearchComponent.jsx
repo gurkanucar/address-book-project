@@ -15,7 +15,7 @@ const SearchComponent = (props) => {
     gender,
     setGender,
     setRestricted,
-  } = props;
+  } = props.searchData;
 
   const [expand, setExpand] = useState(false);
 

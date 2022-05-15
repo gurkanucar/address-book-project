@@ -17,7 +17,7 @@ const ListItem = (props) => {
   const { id } = item;
 
   return (
-    <div className="list-item__root">
+    <div className="list-item__root fadeIn">
       <ItemActions
         id={id}
         setIsAlertModalOpen={setIsAlertModalOpen}

@@ -1,0 +1,21 @@
+.button-bg {
+  border-radius: 25px;
+  border: none;
+  padding: 10px 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: #f5a329;
+  background-color: white;
+  border: 2px solid #f5a329;
+}
+
+.button-bg:hover {
+  color: #fff;
+  background-color: #f5a329;
+  border: 2px solid rgb(224, 224, 224);
+}

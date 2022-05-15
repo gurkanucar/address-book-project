@@ -29,15 +29,17 @@ const HomePage = () => {
     >
       <h1>Address Book</h1>
       <SearchComponent
-        searchedText={searchedText}
-        setSearchedText={setSearchedText}
-        country={country}
-        setCountry={setCountry}
-        category={category}
-        setCategory={setCategory}
-        gender={gender}
-        setGender={setGender}
-        setRestricted={setRestricted}
+        searchData={{
+          searchedText,
+          setSearchedText,
+          country,
+          setCountry,
+          category,
+          setCategory,
+          gender,
+          setGender,
+          setRestricted,
+        }}
       />
       <List
         datas={

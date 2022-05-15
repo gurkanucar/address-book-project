@@ -12,7 +12,6 @@ const PhoneNumbers = (props) => {
           <span className="phone-numbers__title">Phones</span>
         </div>
       }
-
       {home_phone_number && (
         <h3 className="phone-numbers__label">
           <strong>Home:</strong> {home_phone_number}

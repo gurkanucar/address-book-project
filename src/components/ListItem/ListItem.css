@@ -1,26 +1,15 @@
 .list-item__root {
-  /* padding: 30px 30px 30px 30px;
-  border-radius: 50px;
-  margin: 20px 10% 10px 10%;
-  background: #ecebeb;
-  box-shadow: 20px 20px 30px #bebebe, -20px -20px 30px #ffffff;
-
-  transition: all 0.2s ease-in-out; */
   user-select: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
   padding: 20px 30px 10px 30px;
   border-radius: 50px;
-  margin: 20px 10% 10px 10%;
-
+  margin: 50px 5% 10px 5%;
   background: rgb(34, 34, 34);
-  box-shadow: #e489029d 10px 10px 3px;
+  box-shadow: #ffa113fd 8px 8px 0px;
   transition: all 0.2s ease-in-out;
   color: white;
 }
 
-
-
 .list-item__root:hover {
   transform: scale(1.06);
 }
-

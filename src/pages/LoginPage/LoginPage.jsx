@@ -5,6 +5,7 @@ import "./LoginPage.css";
 import { login } from "../../store/auth";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Button from "../../components/Button/Button";
 const LoginPage = () => {
   const err = useSelector((state) => state.auth.value.loggedInError);
 
@@ -20,39 +21,39 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="login-page__div">
-      <h1 className="login-page__title">Address Book Login</h1>
+    <div className="login-page__wrapper fadeIn">
+      <div className="login-page__div">
+        <h1 className="login-page__title">Address Book Login</h1>
 
-      <Input
-        type="text"
-        name="username"
-        onChange={(e) => {
-          setUsername(e.target.value);
-        }}
-        defaultValue={username}
-        value={username}
-        placeholder="username.."
-        labelName="Username"
-      />
-      <Input
-        type="password"
-        name="password"
-        onChange={(e) => {
-          setPassword(e.target.value);
-        }}
-        defaultValue={password}
-        value={password}
-        placeholder="password.."
-        labelName="Password"
-      />
-      {err !== "" ? <h3 className="login-page__error">{err}</h3> : <h3></h3>}
-      <button
-        onClick={loginHandler}
-        className="login-page__login__btn"
-        type="submit"
-      >
-        Login
-      </button>
+        <Input
+          type="text"
+          name="username"
+          onChange={(e) => {
+            setUsername(e.target.value);
+          }}
+          defaultValue={username}
+          value={username}
+          placeholder="username.."
+          labelName="Username"
+        />
+        <Input
+          type="password"
+          name="password"
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+          defaultValue={password}
+          value={password}
+          placeholder="password.."
+          labelName="Password"
+        />
+        {err !== "" ? (
+          <h3 className="login-page__error fadeIn">{err}</h3>
+        ) : (
+          <h3> </h3>
+        )}
+        <Button onClick={loginHandler} text="Login" />
+      </div>
     </div>
   );
 };
