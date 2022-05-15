@@ -31,7 +31,7 @@ const DetailPage = (props) => {
   }, []);
 
   return (
-    <div className="details-page__wrapper">
+    <div className="details-page__wrapper fadeIn">
       <div
         className="details-page__back"
         onClick={() => {
@@ -42,18 +42,17 @@ const DetailPage = (props) => {
       </div>
 
       <div className="details-page__root">
-      
-      <div className="details-page__img">
-      {data?.imageUrl !== "" ? (
-          <img
-            src={data?.imageUrl}
-            style={{ height: 250, width: 250 }}
-            className="summary__img"
-          />
-        ) : (
-          <FaUser style={{ marginBottom: "40px" }} size={250} />
-        )}
-      </div>
+        <div className="details-page__img">
+          {data?.imageUrl !== "" ? (
+            <img
+              src={data?.imageUrl}
+              style={{ height: 250, width: 250 }}
+              className="summary__img"
+            />
+          ) : (
+            <FaUser style={{ marginBottom: "40px" }} size={250} />
+          )}
+        </div>
 
         <div className="details-page__card__list">
           <div className="details-page__card">

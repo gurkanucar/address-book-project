@@ -3,12 +3,14 @@ import "./CreateOrEditPage.css";
 
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+
+import Button from "../../components/Button/Button";
+
 import "./CreateOrEditPage.css";
 
 //formik
 import { useFormik } from "formik";
 //yup for validation scheme
-import * as Yup from "yup";
 
 import { validationSchema } from "../../util/validationSchema";
 import { newRecord } from "../../data/newRecord";
@@ -70,10 +72,7 @@ const CreateOrEditPage = (props) => {
   });
 
   return (
-    <div className="create-or-edit__div">
-      {/* <span>
-        CreateOrEditPage {props.isNew == true ? "NEW" : "EDIT " + params.id}
-      </span> */}
+    <div className="create-or-edit__div fadeIn">
       <span className="create-or-edit__step__text"> {step}</span>
 
       <MdCancel
@@ -107,14 +106,13 @@ const CreateOrEditPage = (props) => {
           color="#4b45a0"
         />
       </div>
-
-      <button
-        onClick={handleSubmit}
-        className="create-or-edit__btn"
-        type="submit"
-      >
-        Save
-      </button>
+      <div className="create-or-edit__btn__wrapper">
+        <Button
+          onClick={handleSubmit}
+          className={"create-or-edit__btn"}
+          text="Save"
+        />
+      </div>
     </div>
   );
 };

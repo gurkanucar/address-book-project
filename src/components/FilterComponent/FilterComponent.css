@@ -7,6 +7,17 @@
   gap: 50px;
 }
 
+@media (max-width: 66px) {
+  .filter-component__div {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px;
+  }
+}
+
 .filter-component__item {
   margin-top: 20px;
   display: flex;

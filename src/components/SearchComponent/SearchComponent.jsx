@@ -35,7 +35,6 @@ const SearchComponent = (props) => {
         labelName="Search"
         hideError={true}
       />
-
       <FilterComponent
         expand={expand}
         searchedText={searchedText}

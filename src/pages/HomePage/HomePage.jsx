@@ -20,6 +20,7 @@ const HomePage = () => {
 
   return (
     <div
+      className="fadeIn"
       style={{
         display: "flex",
         justifyContent: "center",

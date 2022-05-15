@@ -6,7 +6,7 @@ const NotFoundPage = () => {
   let navigate = useNavigate();
 
   return (
-    <div className="wrapper">
+    <div className="wrapper fadeIn">
       <div className="number">404</div>
       <div className="text">
         <span>Ooops...</span>
