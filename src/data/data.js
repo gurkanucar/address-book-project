@@ -425,7 +425,7 @@ export const data = [
     created: new Date("5-11-2022"),
     color: "",
     nick_name: "",
-    birth_date: new Date("10-15-2000"),
+    birth_date: new Date("9-14-2001"),
     place_of_birth: "Texas",
     imageUrl:
       "https://media.istockphoto.com/photos/young-longhaired-smiling-woman-in-white-shirt-picture-id965523228?k=20&m=965523228&s=612x612&w=0&h=X-qYAtuucNDt5d68eNfiXj-spfu_GVdctdwNdJ0X6NQ=",

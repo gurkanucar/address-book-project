@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { isTodayMonthDay } from "../../util/dateConverter";
 import "./UpComingBirthdays.css";
 const BirthDayItem = (props) => {
   const navigate = useNavigate();
@@ -8,6 +9,10 @@ const BirthDayItem = (props) => {
   return (
     <div
       className="birthday-item"
+      style={{
+        backgroundColor:
+        isTodayMonthDay(data.birth_date) === true ? "#fd3f26" : "#fd8e26",
+      }}
       onClick={() => navigate("/addresses/details/" + data.id)}
     >
       <span>{`${data.first_name} ${data.last_name}`}</span>

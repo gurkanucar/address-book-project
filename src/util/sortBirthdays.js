@@ -23,6 +23,12 @@ const sortFunction = (a, b) => {
     flag = -1;
   } else if (a.getDate() > b.getDate() && a.getMonth() == b.getMonth()) {
     flag = -1;
+  } else if (
+    a.getDate() == b.getDate() &&
+    a.getMonth() == b.getMonth() &&
+    a.getFullYear() > b.getFullYear()
+  ) {
+    flag = -1;
   }
   return flag;
 };
