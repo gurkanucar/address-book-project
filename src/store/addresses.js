@@ -8,7 +8,7 @@ export const addressesSlice = createSlice({
   reducers: {
     addRecord: (state, action) => {
       let temp = state.value;
-      temp.push(action.payload);
+      temp.unshift(action.payload);
       state.value = temp;
     },
 
