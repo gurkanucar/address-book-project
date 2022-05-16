@@ -1,0 +1,43 @@
+.birthday-item {
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 70px;
+  color: #fff;
+  padding: 5px 20px;
+  margin: 5px;
+  font-size: 18px;
+  background-color: #fd8e26;
+  border-radius: 25px;
+}
+
+.upcoming-birthday-div {
+  gap: 20px;
+  width: 79%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0c9;
+  padding: 10px 10px 50px 10px;
+  margin: 5px;
+  border-radius: 25px;
+  justify-content: center;
+}
+
+.upcoming-birthday-title {
+  gap: 20px;
+  display: flex;
+  margin: 5px 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.birthday-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./SearchComponent.css";
-import { countries } from "../../data/Countries";
+import { countries } from "../../data/countries";
 import ShowMoreComponent from "../ShowMoreComponent/ShowMoreComponent";
 import FilterComponent from "../FilterComponent/FilterComponent";
 import Input from "../Input/Input";

@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import FabButton from "../../components/FabButton/FabButton";
 import SearchComponent from "../../components/SearchComponent/SearchComponent";
 import { searchFilter, searchFilterRestrict } from "../../util/filterData";
+import UpComingBirthdays from "../../components/UpComingBirthdays/UpComingBirthdays";
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ const HomePage = () => {
   const [category, setCategory] = useState("");
   const [gender, setGender] = useState("");
   const [country, setCountry] = useState("");
+  const [upComingBirthDaysShow, setUpComingBirthDaysShow] = useState(true);
 
   const [restricted, setRestricted] = useState(false);
 
@@ -29,6 +31,11 @@ const HomePage = () => {
       }}
     >
       <h1>Address Book</h1>
+      <UpComingBirthdays
+        onClick={() => setUpComingBirthDaysShow(false)}
+        upComingBirthDaysShow={upComingBirthDaysShow}
+        data={addressList}
+      />
       <SearchComponent
         searchData={{
           searchedText,

@@ -1,5 +1,5 @@
 import React from "react";
-import { countries } from "../../data/Countries";
+import { countries } from "../../data/countries";
 import Input from "../Input/Input";
 import SelectComponent from "../SelectComponent/SelectComponent";
 
