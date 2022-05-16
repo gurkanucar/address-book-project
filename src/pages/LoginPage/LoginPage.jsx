@@ -20,6 +20,12 @@ const LoginPage = () => {
     navigate("/home");
   };
 
+  const onPressHandler = (e) => {
+    if (e.key === "Enter") {
+      loginHandler();
+    }
+  };
+
   return (
     <div className="login-page__wrapper fadeIn">
       <div className="login-page__div">
@@ -31,6 +37,7 @@ const LoginPage = () => {
           onChange={(e) => {
             setUsername(e.target.value);
           }}
+          onKeyPress={onPressHandler}
           defaultValue={username}
           value={username}
           placeholder="username.."
@@ -42,6 +49,7 @@ const LoginPage = () => {
           onChange={(e) => {
             setPassword(e.target.value);
           }}
+          onKeyPress={onPressHandler}
           defaultValue={password}
           value={password}
           placeholder="password.."

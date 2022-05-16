@@ -6,6 +6,7 @@ const Input = (props) => {
     id,
     className,
     defaultValue,
+    onKeyPress,
     name,
     type,
     onChange,
@@ -22,6 +23,7 @@ const Input = (props) => {
       </label>
       <input
         id={id || ""}
+        onKeyPress={onKeyPress}
         className="input-component__input"
         type={type || "text"}
         name={name || ""}
