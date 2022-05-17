@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { isTodayToMonthAndDay } from "../../util/dateConverter";
 import "./UpComingBirthdays.css";
-import { FaBirthdayCake } from "react-icons/fa";
 
 const BirthDayItem = (props) => {
   const navigate = useNavigate();

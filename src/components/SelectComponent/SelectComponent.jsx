@@ -1,20 +1,7 @@
 import React from "react";
 import "./SelectComponent.css";
 const SelectComponent = (props) => {
-  const {
-    labelName,
-    defaultValue,
-    name,
-    type,
-    onChange,
-    value,
-    placeholder,
-    className,
-    error,
-    options,
-  } = props;
-
-  // options =[{value:"val",text:"text"},{value:"val",text:"text"},]
+  const { labelName, name, onChange, value, className, error, options } = props;
 
   return (
     <div className={className || "input-component__item"}>

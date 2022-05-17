@@ -1,3 +1,5 @@
+@import "../../../src/vars.css";
+
 /* @-webkit-keyframes come-in {
   0% {
     -webkit-transform: translatey(100px);
@@ -51,8 +53,8 @@
   height: 220px;
 }
 .floating-container:hover .floating-button {
-  background: #8419ff;
-  box-shadow: 0 20px 20px -10px #b15fd6;
+  background: var(--button-hover-color);
+  box-shadow: 0 20px 20px -10px var(--button-hover-color-shadow-color);
   -webkit-transform: translatey(5px);
   transform: translatey(5px);
   -webkit-transition: all 0.3s;
@@ -83,8 +85,8 @@
   z-index: 100;
   /* background: #2cb3f0;
   box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6); */
-  background: #9941ff;
-  box-shadow: 0 20px 20px -10px #b15fd6;
+  background: var(--button-color);
+  box-shadow: 0 20px 20px -10px var(--button-shadow-color);
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -112,21 +114,21 @@
 }
 
 .floating-container .float-element:nth-child(1) {
-  background: #9941ff;
-  box-shadow: 0 20px 20px -10px #b15fd6;
+  background-color: var(--button-color);
+  box-shadow: 0 20px 20px -10px var(--button-shadow-color);
 }
 
 .float-element:nth-child(1):hover {
   background: #8419ff;
-  box-shadow: 0 20px 20px -10px #b15fd6;
+  box-shadow: 0 20px 20px -10px var(--button-hover-shadow-color);
 }
 
 .floating-container .float-element:nth-child(2) {
-  background: #9941ff;
-  box-shadow: 0 20px 20px -10px #b15fd6;
+  background-color: var(--button-color);
+  box-shadow: 0 20px 20px -10px var(--button-shadow-color);
 }
 
 .float-element:nth-child(2):hover {
   background: #8419ff;
-  box-shadow: 0 20px 20px -10px #b15fd6;
+  box-shadow: 0 20px 20px -10px var(--button-hover-shadow-color);
 }

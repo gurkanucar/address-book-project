@@ -31,17 +31,6 @@ const Step2 = (props) => {
         labelName="Home Phone Number"
       />
 
-      {/* <Input
-      type="text"
-      name="country"
-      onChange={handleChange}
-      defaultValue={values.country}
-      value={values.country}
-      placeholder="country.."
-      error={errors.country}
-      labelName="Country"
-    /> */}
-
       <SelectComponent
         type="text"
         name="country"

@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { dateConverter } from "../../util/dateConverter";
 import Input from "../Input/Input";
-import { FaUser } from "react-icons/fa";
 import SelectComponent from "../SelectComponent/SelectComponent";
 import UserImageComponent from "../ImageComponent/UserImageComponent";
 
@@ -67,7 +66,6 @@ const Step3 = (props) => {
           type="date"
           name="birth_date"
           id="birth_date"
-          // defaultValue={dateConverter(values.birth_date)}
           onChange={handleChange}
           value={dateConverter(values.birth_date)}
           placeholder="birth_date.."

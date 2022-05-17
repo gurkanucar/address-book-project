@@ -1,3 +1,5 @@
+@import "../../../src/vars.css";
+
 .birthday-item {
   user-select: none;
   cursor: pointer;
@@ -5,7 +7,7 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 70px;
-  color: #fff;
+  color: var(--birthday-item-text-color);
   padding: 5px 20px;
   margin: 5px;
   font-size: 18px;
@@ -17,7 +19,7 @@
   width: 79%;
   display: flex;
   flex-direction: column;
-  background-color: #f0f0f085;
+  background-color: var(--search-component-bg-color);
   padding: 10px 10px 50px 10px;
   margin: 5px;
   border-radius: 25px;

@@ -1,9 +1,8 @@
+@import "../../../src/vars.css";
+
 .home-page-bg {
   /* Created with https://www.css-gradient.com */
-  background: #dec9ff;
-  background: -webkit-linear-gradient(top left, #dec9ff, #d6aaff);
-  background: -moz-linear-gradient(top left, #dec9ff, #d6aaff);
-  background: linear-gradient(to bottom right, #dec9ff, #d6aaff);
+  background: var(--home-page-bg);
   background-repeat: repeat-y;
   min-height: 100vh;
 }

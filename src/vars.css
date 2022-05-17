@@ -1,0 +1,31 @@
+/* 
+
+@import "../../../src/vars.css";
+
+*/
+
+:root {
+  --error-text-color: #4804b4;
+  --label-text-color: #6c10ff;
+  --label-text-color-light: #d4b3ff;
+  --input-border-color: #bd94ffad;
+  --input-outline-color: #bd94ffad;
+  --button-text-color: #fff;
+  --button-color: #9941ff;
+  --button-hover-color: #8419ff;
+  --button-hover-shadow-color: #b15fd6;
+  --button-shadow-color: #b15fd6;
+  --delete-button-color: #9941ff;
+  --delete-button-hover-color: #4804b4;
+  --list-item-box-shadow: #6d02cc 8px 8px 15px;
+  --list-item-gradient-bg: linear-gradient(to bottom right, #6d02cc, #cf8aff);
+  --create-or-edit-page-bg: linear-gradient(to bottom right, #dec9ff, #d6aaff);
+  --detail-page-bg: linear-gradient(to bottom right, #d1c4ff, #d6aaff);
+  --home-page-bg: linear-gradient(to bottom right, #dec9ff, #d6aaff);
+  --login-page-bg: linear-gradient(to bottom right, #dab1f9, #9823ce);
+  --detail-page-card-bg-color: #2c2c2c;
+  --search-component-bg-color: #f0f0f085;
+  --summary-job-color: #dfafff;
+  --summary-name-color: #ffffff;
+  --birthday-item-text-color: #fff;
+}

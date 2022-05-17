@@ -1,3 +1,5 @@
+@import "../../../src/vars.css";
+
 .list-item__root {
   user-select: none;
 
@@ -10,8 +12,8 @@
   /* Created with https://www.css-gradient.com */
   /* Created with https://www.css-gradient.com */
   /* background: #6D02CC; */
-  background: linear-gradient(to bottom right, #6d02cc, #cf8aff);
-  box-shadow: #6d02cc 8px 8px 15px;
+  background: var(--list-item-gradient-bg);
+  box-shadow: var(--list-item-box-shadow);
 
   transition: all 0.2s ease-in-out;
   color: white;
@@ -21,6 +23,6 @@
   transform: scale(1.06);
 }
 
-.list-item-components{
+.list-item-components {
   cursor: pointer;
 }

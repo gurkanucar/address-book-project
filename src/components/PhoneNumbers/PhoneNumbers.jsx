@@ -2,7 +2,7 @@ import React from "react";
 import "./PhoneNumbers.css";
 import { FaPhone } from "react-icons/fa";
 const PhoneNumbers = (props) => {
-  const { home_phone_number, work_phone_number, phone_number } = props.data;
+  const { home_phone_number, work_phone_number } = props.data;
 
   return (
     <div className="card-details__item">

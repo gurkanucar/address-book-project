@@ -5,7 +5,6 @@ const Input = (props) => {
     labelName,
     id,
     className,
-    defaultValue,
     onKeyPress,
     name,
     type,

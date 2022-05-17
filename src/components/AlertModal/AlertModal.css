@@ -1,3 +1,5 @@
+@import "../../../src/vars.css";
+
 .alert-modal__centered {
   position: fixed;
   top: 40%;
@@ -28,7 +30,7 @@
 .alert-modal__heading {
   margin: 0;
   padding: 10px;
-  color: #4804b4;
+  color: var(--error-text-color);
   font-weight: 800;
   font-size: 18px;
   text-align: center;
@@ -38,7 +40,7 @@
   padding: 10px;
   font-size: 18px;
   font-weight: 500;
-  color: #6c10ff;
+  color: var(--label-text-color);
   text-align: center;
 }
 
@@ -64,14 +66,14 @@
   font-size: 0.8rem;
   border: none;
   color: #fff;
-  background: #9941ff;
+  background: var(--delete-button-color);
   transition: all 0.25s ease;
 }
 
 .alert-modal__deleteBtn:hover {
-  box-shadow: 0 10px 20px -10px #4804b4;
+  box-shadow: 0 10px 20px -10px var(--delete-button-hover-color);
   transform: translateY(-5px);
-  background: #4804b4;
+  background: var(--delete-button-hover-color);
 }
 
 .alert-modal__cancelBtn {
@@ -81,8 +83,8 @@
   padding: 11px 28px;
   border-radius: 12px;
   font-size: 0.8rem;
-  border: solid 1px #9941ff;
-  color: #9941ff;
+  border: solid 1px var(--button-color);
+  color: var(--button-color);
   background: #fcfcfc;
   transition: all 0.25s ease;
 }
@@ -90,6 +92,6 @@
 .alert-modal__cancelBtn:hover {
   box-shadow: none;
   transform: none;
-  background: #8419ff;
+  background: var(--button-hover-color);
   color: white;
 }

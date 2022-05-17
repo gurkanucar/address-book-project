@@ -6,8 +6,6 @@ const SocialMedia = (props) => {
 
   return (
     <div className="card-details__item">
-      {/* <hr className="hr"></hr> */}
-
       <div className="card-details__title">
         <FaShareAlt />
         <span className="social-media__title">Social Media</span>

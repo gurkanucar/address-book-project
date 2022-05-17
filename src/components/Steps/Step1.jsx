@@ -40,17 +40,6 @@ const Step1 = (props) => {
         labelName="E-mail"
       />
 
-      {/* <Input
-                type="text"
-                name="gender"
-                onChange={handleChange}
-                defaultValue={values.gender}
-                value={values.gender}
-                placeholder="Gender.."
-                error={errors.gender}
-                labelName="Gender"
-              /> */}
-
       <SelectComponent
         type="text"
         name="gender"

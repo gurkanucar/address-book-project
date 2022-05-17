@@ -1,3 +1,5 @@
+@import "../../../src/vars.css";
+
 .summary__root {
   margin-bottom: 20px;
 }
@@ -30,14 +32,14 @@
   font-size: 30px;
   font-weight: bold;
   margin: 0;
-  color: #ffffff;
+  color: var(--summary-name-color);
 }
 
 .summary__job {
   font-size: 20px;
   margin: 0 0 20px 0;
   font-weight: bold;
-  color: #dfafff;
+  color: var(--summary-job-color)
 }
 
 .summary__age {

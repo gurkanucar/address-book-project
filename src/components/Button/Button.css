@@ -1,3 +1,5 @@
+@import "../../../src/vars.css";
+
 .button-bg {
   border-radius: 25px;
   border: none;
@@ -9,11 +11,11 @@
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  color: #fff;
-  background-color: #9941ff;
+  color: var(--button-text-color);
+  background-color: var(--button-color);
 }
 
 .button-bg:hover {
-  color: #fff;
-  background-color: #8419ff;
+  color: var(--button-text-color);
+  background-color: var(--button-hover-color);
 }

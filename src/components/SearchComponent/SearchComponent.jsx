@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./SearchComponent.css";
-
 import ShowMoreComponent from "../ShowMoreComponent/ShowMoreComponent";
 import FilterComponent from "../FilterComponent/FilterComponent";
 import Input from "../Input/Input";

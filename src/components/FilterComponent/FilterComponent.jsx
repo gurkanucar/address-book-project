@@ -1,13 +1,13 @@
 import React from "react";
+import { categoryData } from "../../data/categoryData";
 import { countryData } from "../../data/countryData";
+import { genderData } from "../../data/genderData";
 
 import SelectComponent from "../SelectComponent/SelectComponent";
 import "./FilterComponent.css";
 const FilterComponent = (props) => {
   const {
     expand,
-    searchedText,
-    setSearchedText,
     category,
     setCategory,
     country,
@@ -16,22 +16,15 @@ const FilterComponent = (props) => {
     setGender,
   } = props;
 
-  const genderOptions = [
-    { value: "", text: "...not selected" },
-    { value: "male", text: "male" },
-    { value: "female", text: "female" },
-  ];
+  const genderOptions = [{ value: "", text: "...not selected" }, ...genderData];
   const categoryOptions = [
     { value: "", text: "...not selected" },
-    { value: "family", text: "family" },
-    { value: "friend", text: "friend" },
-    { value: "job", text: "job" },
-    { value: "sport", text: "sport" },
-    { value: "school", text: "school" },
-    { value: "other", text: "other" },
+    ...categoryData,
   ];
-
-  const countryOptions = [{ value: "", text: "...not selected" }, ...countryData];
+  const countryOptions = [
+    { value: "", text: "...not selected" },
+    ...countryData,
+  ];
 
   return (
     expand && (

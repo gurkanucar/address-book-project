@@ -1,19 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { _calculateAge } from "../../util/ageCalculator";
-import { randomNumber } from "../../util/randomGenerator";
+import React, { useState } from "react";
 import CardDetail from "../CardDetail/CardDetail";
 import Summary from "../Summary/Summary";
-
 import "./ListItem.css";
-
 import ItemActions from "../ItemActions/ItemActions";
 import ShowMoreComponent from "../ShowMoreComponent/ShowMoreComponent";
 
 const ListItem = (props) => {
   const { item, setIsAlertModalOpen, setId } = props;
-
   const [expand, setExpand] = useState(false);
-
   const { id } = item;
 
   return (
@@ -29,11 +23,7 @@ const ListItem = (props) => {
       >
         <Summary data={item} />
         <CardDetail data={item} expand={expand} />
-        <ShowMoreComponent
-          color="fff"
-          setExpand={setExpand}
-          expand={expand}
-        />
+        <ShowMoreComponent color="fff" setExpand={setExpand} expand={expand} />
       </div>
     </div>
   );
