@@ -1,5 +1,6 @@
 import React from "react";
-import { countries } from "../../data/countries";
+import { countryData } from "../../data/countryData";
+
 import Input from "../Input/Input";
 import SelectComponent from "../SelectComponent/SelectComponent";
 
@@ -49,7 +50,7 @@ const Step2 = (props) => {
         value={values.country}
         placeholder="country.."
         error={errors.country}
-        options={countries}
+        options={countryData}
         labelName="Country"
       />
 

@@ -1,5 +1,6 @@
 import React from "react";
-import { countries } from "../../data/countries";
+import { countryData } from "../../data/countryData";
+
 import SelectComponent from "../SelectComponent/SelectComponent";
 import "./FilterComponent.css";
 const FilterComponent = (props) => {
@@ -30,7 +31,7 @@ const FilterComponent = (props) => {
     { value: "other", text: "other" },
   ];
 
-  const countryOptions = [{ value: "", text: "...not selected" }, ...countries];
+  const countryOptions = [{ value: "", text: "...not selected" }, ...countryData];
 
   return (
     expand && (
