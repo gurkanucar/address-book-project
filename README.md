@@ -65,6 +65,8 @@
 
 ![example](./images/ex2.png)
 
+![example](./images/ex22.png)
+
 ![example](./images/ex3.png)
 
 ![example](./images/ex4.png)
