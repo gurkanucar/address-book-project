@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { dateConverterFormatted } from "../../util/dateConverter";
+
 import "./DetailPage.css";
 import { FaUser, FaChevronCircleLeft } from "react-icons/fa";
 
@@ -198,7 +198,7 @@ const DetailPage = (props) => {
                 <div className="details-page__item">
                   <span className="details-page__title">Created:</span>
                   <span className="details-page__value">
-                    {dateConverterFormatted(data?.created)}
+                    {new Date(data?.created).toLocaleDateString()}
                   </span>
                 </div>
               )}
@@ -212,7 +212,7 @@ const DetailPage = (props) => {
                 <div className="details-page__item">
                   <span className="details-page__title">Birth Date:</span>
                   <span className="details-page__value">
-                    {dateConverterFormatted(data?.birth_date)}
+                    {new Date(data?.birth_date).toLocaleDateString()}
                   </span>
                 </div>
               )}

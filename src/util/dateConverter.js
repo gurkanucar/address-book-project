@@ -1,21 +1,11 @@
 export const dateConverter = (val) => {
-  let curr;
-  if (val === undefined || val === null) {
-    curr = new Date();
-  } else {
-    curr = new Date(val);
-  }
-
-  curr.setDate(curr.getDate());
-  const date = curr.toISOString().split("T")[0];
-  return date;
+  const date = new Date();
+  let local = new Date(val);
+  local.setMinutes(date.getMinutes() - date.getTimezoneOffset());
+  return local.toJSON().slice(0, 10);
 };
 
-export const dateConverterFormatted = (val) => {
-  return new Date(dateConverter(val)).toLocaleDateString("en-US");
-};
-
-export const isTodayMonthDay = (val) => {
+export const isTodayToMonthAndDay = (val) => {
   const today = new Date();
   const compareDate = new Date(val);
   return (

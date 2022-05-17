@@ -67,7 +67,7 @@ const Step3 = (props) => {
           type="date"
           name="birth_date"
           id="birth_date"
-          defaultValue={dateConverter(values.birth_date)}
+          // defaultValue={dateConverter(values.birth_date)}
           onChange={handleChange}
           value={dateConverter(values.birth_date)}
           placeholder="birth_date.."

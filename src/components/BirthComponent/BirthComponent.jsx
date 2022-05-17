@@ -2,10 +2,7 @@ import React from "react";
 import { _calculateAge } from "../../util/ageCalculator";
 import "./BirthComponent.css";
 import { FaBirthdayCake } from "react-icons/fa";
-import {
-  dateConverter,
-  dateConverterFormatted,
-} from "../../util/dateConverter";
+
 
 const BirthComponent = (props) => {
   const { birth_date, place_of_birth, gender, nick_name } = props.data;
@@ -18,7 +15,8 @@ const BirthComponent = (props) => {
       </div>
       {birth_date && (
         <h3 className="birth__label">
-          <strong>Birth Date:</strong> {dateConverterFormatted(birth_date)}
+          <strong>Birth Date:</strong>
+          {new Date(birth_date).toLocaleDateString()}
         </h3>
       )}
       {birth_date && (
