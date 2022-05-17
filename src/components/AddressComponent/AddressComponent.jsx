@@ -1,6 +1,8 @@
 import React from "react";
 import "./AddressComponent.css";
 import { FaMapMarkedAlt } from "react-icons/fa";
+import InfoElement from "../InfoElement/InfoElement";
+
 const AddressComponent = (props) => {
   const { country, city, home_address, work_address } = props.data;
 
@@ -10,27 +12,10 @@ const AddressComponent = (props) => {
         <FaMapMarkedAlt />
         <span className="address__title">Address</span>
       </div>
-
-      {country && (
-        <h3 className="address__label">
-          <strong>Country:</strong> {country}
-        </h3>
-      )}
-      {city && (
-        <h3 className="address__label">
-          <strong>City:</strong> {city}
-        </h3>
-      )}
-      {home_address && (
-        <h3 className="address__label">
-          <strong>Home:</strong> {home_address}
-        </h3>
-      )}
-      {work_address && (
-        <h3 className="address__label">
-          <strong>Work:</strong> {work_address}
-        </h3>
-      )}
+      <InfoElement value={country}>Country:</InfoElement>
+      <InfoElement value={city}>City:</InfoElement>
+      <InfoElement value={home_address}>Home:</InfoElement>
+      <InfoElement value={work_address}>Work:</InfoElement>
     </div>
   );
 };

@@ -31,24 +31,7 @@
   color: var(--button-hover-color);
 }
 
-.details-page__card {
-  min-width: 350px;
-  border-radius: 25px;
-  padding: 20px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 5px;
-  gap: 10px;
-  background-color: var(--detail-page-card-bg-color);
-  flex-direction: column;
-  width: 40%;
-  transition: all 0.2s ease-in-out;
-}
 
-.details-page__card:hover {
-  transform: scale(1.05);
-}
 
 .details-page__img {
   transition: all 0.2s ease-in-out;
@@ -58,30 +41,4 @@
   transform: scale(1.2);
 }
 
-.details-page__card__list {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  margin: 50px;
-  gap: 30px;
-}
 
-.details-page__item {
-  display: flex;
-  margin: 5px;
-  gap: 10px;
-}
-
-.details-page__title {
-  color: var(--label-text-color-light);
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.details-page__value {
-  color: white;
-  font-size: 20px;
-  font-weight: 500;
-}

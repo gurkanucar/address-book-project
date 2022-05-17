@@ -1,0 +1,46 @@
+.detail-list-component__card__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 50px;
+    gap: 30px;
+  }
+  
+  .detail-list-component__item {
+    display: flex;
+    margin: 5px;
+    gap: 10px;
+  }
+  
+  .detail-list-component__title {
+    color: var(--label-text-color-light);
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .detail-list-component__value {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .detail-list-component__card {
+    min-width: 350px;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 5px;
+    gap: 10px;
+    background-color: var(--detail-page-card-bg-color);
+    flex-direction: column;
+    width: 40%;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .detail-list-component__card:hover {
+    transform: scale(1.05);
+  }

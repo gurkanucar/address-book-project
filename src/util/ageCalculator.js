@@ -1,5 +1,6 @@
 export const _calculateAge = (birthday) => {
-  var ageDifMs = Date.now() - new Date(birthday).getTime();
-  var ageDate = new Date(ageDifMs);
-  return Math.abs(ageDate.getUTCFullYear() - 1970);
+  const ageDifMs = Date.now() - new Date(birthday).getTime();
+  const ageDate = new Date(ageDifMs);
+  let age = Math.ceil(ageDate.getUTCFullYear() - 1970);
+  return age === 0 ? 1 : age;
 };

@@ -2,7 +2,7 @@ import React from "react";
 import { _calculateAge } from "../../util/ageCalculator";
 import "./BirthComponent.css";
 import { FaBirthdayCake } from "react-icons/fa";
-
+import InfoElement from "../InfoElement/InfoElement";
 
 const BirthComponent = (props) => {
   const { birth_date, place_of_birth, gender, nick_name } = props.data;
@@ -13,32 +13,13 @@ const BirthComponent = (props) => {
         <FaBirthdayCake />
         <span className="birth__title">Birth</span>
       </div>
-      {birth_date && (
-        <h3 className="birth__label">
-          <strong>Birth Date:</strong>
-          {new Date(birth_date).toLocaleDateString()}
-        </h3>
-      )}
-      {birth_date && (
-        <h3 className="birth__label">
-          <strong>Age:</strong> {_calculateAge(birth_date)}
-        </h3>
-      )}
-      {place_of_birth && (
-        <h3 className="birth__label">
-          <strong>Place:</strong> {place_of_birth}
-        </h3>
-      )}
-      {gender && (
-        <h3 className="birth__label">
-          <strong>Gender:</strong> {gender}
-        </h3>
-      )}
-      {nick_name && (
-        <h3 className="birth__label">
-          <strong>Nick:</strong> {nick_name}
-        </h3>
-      )}
+      <InfoElement value={new Date(birth_date).toLocaleDateString()}>
+        Birth Date:
+      </InfoElement>
+      <InfoElement value={_calculateAge(birth_date)}>Age:</InfoElement>
+      <InfoElement value={place_of_birth}>Place:</InfoElement>
+      <InfoElement value={gender}>Gender:</InfoElement>
+      <InfoElement value={nick_name}>Nick:</InfoElement>
     </div>
   );
 };
