@@ -9,13 +9,11 @@
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  color: #f5a329;
-  background-color: white;
-  border: 2px solid #f5a329;
+  color: #fff;
+  background-color: #9941ff;
 }
 
 .button-bg:hover {
   color: #fff;
-  background-color: #f5a329;
-  border: 2px solid rgb(224, 224, 224);
+  background-color: #8419ff;
 }

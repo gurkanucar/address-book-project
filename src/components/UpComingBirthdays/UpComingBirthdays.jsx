@@ -10,12 +10,12 @@ const UpComingBirthdays = (props) => {
   return props.upComingBirthDaysShow === true ? (
     <div className="upcoming-birthday-div">
       <div className="upcoming-birthday-title">
-        <h2>Upcoming Birthdays</h2>
+        <h2 style={{ color: "#6c10ff" }}>Upcoming Birthdays</h2>
         <AiFillCloseCircle
           size={35}
           style={{ cursor: "pointer" }}
           onClick={props.onClick}
-          color="#fd2d26"
+          className="create-or-edit__cancel__btn"
         />
       </div>
       <div className="birthday-list">

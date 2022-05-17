@@ -23,10 +23,18 @@ const ListItem = (props) => {
         setIsAlertModalOpen={setIsAlertModalOpen}
         setId={setId}
       />
-      <Summary data={item} />
-      <CardDetail data={item} expand={expand} />
-
-      <ShowMoreComponent setExpand={setExpand} expand={expand} />
+      <div
+        className="list-item-components fadeIn"
+        onClick={() => setExpand(!expand)}
+      >
+        <Summary data={item} />
+        <CardDetail data={item} expand={expand} />
+        <ShowMoreComponent
+          color="fff"
+          setExpand={setExpand}
+          expand={expand}
+        />
+      </div>
     </div>
   );
 };

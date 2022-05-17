@@ -72,46 +72,47 @@ const CreateOrEditPage = (props) => {
   });
 
   return (
-    <div className="create-or-edit__div fadeIn">
-      <span className="create-or-edit__step__text"> {step}</span>
+    <div className="create-or-edit__bg fadeIn">
+      <div className="create-or-edit__div">
+        <span className="create-or-edit__step__text"> {step}</span>
 
-      <MdCancel
-        className="create-or-edit__cancel__btn"
-        size={50}
-        onClick={() => {
-          navigate("/home");
-        }}
-        color="#f02b2b"
-      />
-
-      <div className="create-or-edit__step">
-        <BsCaretLeftFill
-          size={80}
-          className="create-or-edit__step__btn"
-          onClick={() => stepHandler(-1, max, step, setStep)}
-          color="#4b45a0"
+        <MdCancel
+          className="create-or-edit__cancel__btn"
+          size={50}
+          onClick={() => {
+            navigate("/home");
+          }}
         />
 
-        <MainForm
-          handleChange={handleChange}
-          values={values}
-          errors={errors}
-          step={step}
-        />
+        <div className="create-or-edit__step">
+          <BsCaretLeftFill
+            size={80}
+            className="create-or-edit__step__btn"
+            onClick={() => stepHandler(-1, max, step, setStep)}
+            color="#4b45a0"
+          />
 
-        <BsCaretRightFill
-          size={80}
-          className="create-or-edit__step__btn"
-          onClick={() => stepHandler(1, max, step, setStep)}
-          color="#4b45a0"
-        />
-      </div>
-      <div className="create-or-edit__btn__wrapper">
-        <Button
-          onClick={handleSubmit}
-          className={"create-or-edit__btn"}
-          text="Save"
-        />
+          <MainForm
+            handleChange={handleChange}
+            values={values}
+            errors={errors}
+            step={step}
+          />
+
+          <BsCaretRightFill
+            size={80}
+            className="create-or-edit__step__btn"
+            onClick={() => stepHandler(1, max, step, setStep)}
+            color="#4b45a0"
+          />
+        </div>
+        <div className="create-or-edit__btn__wrapper">
+          <Button
+            onClick={handleSubmit}
+            className={"create-or-edit__btn"}
+            text="Save"
+          />
+        </div>
       </div>
     </div>
   );

@@ -4,13 +4,13 @@ import { FaPhone, FaUser } from "react-icons/fa";
 import ImageComponent from "./ImageComponent";
 
 const UserImageComponent = (props) => {
-  const { img, className, size } = props;
+  const { img, className, size, color } = props;
   return (
     <div>
       {img !== "" ? (
         <ImageComponent className={className} img={img} />
       ) : (
-        <FaUser size={size || 180} />
+        <FaUser color={color} size={size || 180} />
       )}
     </div>
   );

@@ -1,3 +1,14 @@
+.login-page-bg {
+  height: 100vh;
+  width: 100%;
+
+  /* Created with https://www.css-gradient.com */
+  background: #dab1f9;
+  background: -webkit-linear-gradient(top left, #dab1f9, #9823ce);
+  background: -moz-linear-gradient(top left, #dab1f9, #9823ce);
+  background: linear-gradient(to bottom right, #dab1f9, #9823ce);
+}
+
 .login-page__wrapper {
   display: flex;
   flex-direction: column;
@@ -18,14 +29,13 @@
   border-radius: 25px;
 }
 
-
-
 .login-page__title {
   margin-bottom: 50px;
+  color: #6c10ff;
 }
 
 .login-page__error {
-  color: #ff2d2d;
+  color: #4804b4;
   font-weight: 700;
   margin: 0 0 40px 0;
   white-space: pre-wrap;

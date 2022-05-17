@@ -27,40 +27,42 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="login-page__wrapper fadeIn">
-      <div className="login-page__div">
-        <h1 className="login-page__title">Address Book Login</h1>
+    <div className="login-page-bg">
+      <div className="login-page__wrapper fadeIn">
+        <div className="login-page__div">
+          <h1 className="login-page__title">Address Book Login</h1>
 
-        <Input
-          type="text"
-          name="username"
-          onChange={(e) => {
-            setUsername(e.target.value);
-          }}
-          onKeyPress={onPressHandler}
-          defaultValue={username}
-          value={username}
-          placeholder="username.."
-          labelName="Username"
-        />
-        <Input
-          type="password"
-          name="password"
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          onKeyPress={onPressHandler}
-          defaultValue={password}
-          value={password}
-          placeholder="password.."
-          labelName="Password"
-        />
-        {err !== "" ? (
-          <h3 className="login-page__error fadeIn">{err}</h3>
-        ) : (
-          <h3> </h3>
-        )}
-        <Button onClick={loginHandler} text="Login" />
+          <Input
+            type="text"
+            name="username"
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
+            onKeyPress={onPressHandler}
+            defaultValue={username}
+            value={username}
+            placeholder="username.."
+            labelName="Username"
+          />
+          <Input
+            type="password"
+            name="password"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+            onKeyPress={onPressHandler}
+            defaultValue={password}
+            value={password}
+            placeholder="password.."
+            labelName="Password"
+          />
+          {err !== "" ? (
+            <h3 className="login-page__error fadeIn">{err}</h3>
+          ) : (
+            <h3> </h3>
+          )}
+          <Button onClick={loginHandler} text="Login" />
+        </div>
       </div>
     </div>
   );

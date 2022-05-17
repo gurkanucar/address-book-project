@@ -50,6 +50,7 @@ const SearchComponent = (props) => {
       <ShowMoreComponent
         className="search-component__show__more"
         setExpand={setExpand}
+        color="ae00ff"
         expand={expand}
       />
     </div>

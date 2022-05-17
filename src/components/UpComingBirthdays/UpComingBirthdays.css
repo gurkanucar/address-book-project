@@ -9,7 +9,6 @@
   padding: 5px 20px;
   margin: 5px;
   font-size: 18px;
-  background-color: #fd8e26;
   border-radius: 25px;
 }
 
@@ -18,7 +17,7 @@
   width: 79%;
   display: flex;
   flex-direction: column;
-  background-color: #f0f0f0c9;
+  background-color: #f0f0f085;
   padding: 10px 10px 50px 10px;
   margin: 5px;
   border-radius: 25px;

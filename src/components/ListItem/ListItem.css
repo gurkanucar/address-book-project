@@ -1,15 +1,26 @@
 .list-item__root {
   user-select: none;
-  cursor: pointer;
+
   padding: 20px 30px 10px 30px;
   border-radius: 50px;
   margin: 50px 5% 10px 5%;
-  background: rgb(34, 34, 34);
-  box-shadow: #ffa113fd 8px 8px 0px;
+  /* background:#222222;
+  box-shadow: #ffa113fd 8px 8px 0px; */
+
+  /* Created with https://www.css-gradient.com */
+  /* Created with https://www.css-gradient.com */
+  /* background: #6D02CC; */
+  background: linear-gradient(to bottom right, #6d02cc, #cf8aff);
+  box-shadow: #6d02cc 8px 8px 15px;
+
   transition: all 0.2s ease-in-out;
   color: white;
 }
 
 .list-item__root:hover {
   transform: scale(1.06);
+}
+
+.list-item-components{
+  cursor: pointer;
 }

@@ -34,19 +34,19 @@ const Summary = (props) => {
           <span className="summary__job">{job}</span>
           <br />
           <SummaryRow text={phone_number}>
-            <FaPhone color="e48902" size={25} />
+            <FaPhone color="dfafff" size={25} />
           </SummaryRow>
           <SummaryRow text={email}>
-            <MdMail color="e48902" size={25} />
+            <MdMail color="dfafff" size={25} />
           </SummaryRow>
           <SummaryRow text={category}>
-            <BiCategory color="e48902" size={25} />
+            <BiCategory color="dfafff" size={25} />
           </SummaryRow>
           <SummaryRow text={`${city}, ${country.toUpperCase()}`}>
-            <MdLocationPin color="e48902" size={25} />
+            <MdLocationPin color="dfafff" size={25} />
           </SummaryRow>
         </div>
-        <UserImageComponent img={imageUrl} />
+        <UserImageComponent color="dfafff" img={imageUrl} />
       </div>
     </div>
   );

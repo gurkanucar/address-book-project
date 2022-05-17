@@ -6,7 +6,7 @@ const Step1 = (props) => {
   const { handleChange, values, errors } = props;
 
   return (
-    <div className="create-or-edit__form">
+    <div className="create-or-edit__form fadeIn">
       <Input
         type="text"
         name="first_name"

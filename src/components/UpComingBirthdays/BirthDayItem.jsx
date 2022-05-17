@@ -11,7 +11,7 @@ const BirthDayItem = (props) => {
       className="birthday-item"
       style={{
         backgroundColor:
-        isTodayMonthDay(data.birth_date) === true ? "#fd3f26" : "#fd8e26",
+          isTodayMonthDay(data.birth_date) === true ? "#8133ff" : "#b385ff",
       }}
       onClick={() => navigate("/addresses/details/" + data.id)}
     >
