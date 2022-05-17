@@ -1,3 +1,5 @@
+import { generateBirthDay } from "../util/generateBirthDay";
+
 export const data = [
   {
     id: 3,
@@ -80,7 +82,7 @@ export const data = [
     created: new Date("5-11-2022"),
     color: "",
     nick_name: "tirinini sinan",
-    birth_date: new Date("08-08-1963"),
+    birth_date: generateBirthDay(),
     place_of_birth: "Konya",
     imageUrl:
       "https://im.haberturk.com/2021/02/28/ver1614509182/2988727_020dd7102e179a6c17a4ace49f2ec177.jpg",
