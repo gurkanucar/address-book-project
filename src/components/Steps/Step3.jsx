@@ -11,7 +11,6 @@ const Step3 = (props) => {
   return (
     <div className="create-or-edit__form__col fadeIn">
       <UserImageComponent color="b15fd6" img={values.imageUrl} />
-      <br/>
       <div className="create-or-edit__form">
         <Input
           type="text"

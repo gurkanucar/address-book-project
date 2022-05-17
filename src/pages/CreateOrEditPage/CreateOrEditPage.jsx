@@ -86,7 +86,6 @@ const CreateOrEditPage = (props) => {
 
         <div className="create-or-edit__step">
           <BsCaretLeftFill
-            size={80}
             className="create-or-edit__step__btn"
             onClick={() => stepHandler(-1, max, step, setStep)}
             color="#4b45a0"
@@ -100,7 +99,6 @@ const CreateOrEditPage = (props) => {
           />
 
           <BsCaretRightFill
-            size={80}
             className="create-or-edit__step__btn"
             onClick={() => stepHandler(1, max, step, setStep)}
             color="#4b45a0"
