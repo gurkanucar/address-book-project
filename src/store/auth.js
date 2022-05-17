@@ -10,7 +10,6 @@ export const authSlice = createSlice({
   },
   reducers: {
     login: (state, action) => {
-      // state.value = state.value.filter((x) => x.id !== action.payload.id);
       if (
         action.payload.username === "grkn" &&
         action.payload.password === "pass"

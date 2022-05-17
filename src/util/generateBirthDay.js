@@ -4,8 +4,5 @@ export const generateBirthDay = () => {
     .getDate()
     .toString()}-1963`;
 
-  console.log("day", today.getDate(), "month", today.getMonth() + 1);
-
   return new Date(value.toString());
-  // return new Date("5-11-2022");
 };

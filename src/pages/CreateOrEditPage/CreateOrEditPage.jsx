@@ -16,38 +16,30 @@ import { validationSchema } from "../../util/validationSchema";
 import { newRecord } from "../../data/newRecord";
 import { stepHandler } from "../../util/stepHandler";
 
-import { addRecord, updateRecord } from "../../store/addresses";
-import { generateId } from "../../util/generateId";
 import MainForm from "../../components/Steps/MainForm";
 
 import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 import { MdCancel } from "react-icons/md";
+import {
+  checkID,
+  update,
+  create,
+  getDataOrNavigate,
+} from "./CreateOrEditPageFunctions";
 
 const CreateOrEditPage = (props) => {
   let params = useParams();
   const dispatch = useDispatch();
   const addresses = useSelector((state) => state.addresses.value);
-
   let navigate = useNavigate();
 
-  const max = 4;
-  const [step, setStep] = useState(1);
+  const maxStep = 4;
+  const [stepCount, setStepCount] = useState(1);
   const [data, setData] = useState(newRecord);
 
-  const checkID = () => {
-    return params.id !== null && params.id !== undefined;
-  };
-
-  //find data if exists
   useEffect(() => {
-    if (checkID()) {
-      const id = Number(params.id);
-      const item = addresses.find((x) => x.id === id);
-      if (item === undefined) {
-        navigate("/404");
-      } else {
-        setData(item);
-      }
+    if (checkID(params)) {
+      setData(getDataOrNavigate(params.id, addresses, navigate, "/404"));
     }
   }, []);
 
@@ -56,16 +48,10 @@ const CreateOrEditPage = (props) => {
     initialValues: data,
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      console.log(values);
-      if (checkID()) {
-        dispatch(updateRecord({ id: Number(params.id), values: values }));
+      if (checkID(params)) {
+        update(dispatch, params, values);
       } else {
-        dispatch(
-          addRecord({
-            id: generateId(addresses),
-            ...values,
-          })
-        );
+        create(dispatch, addresses, values);
       }
       navigate("/home");
     },
@@ -74,7 +60,7 @@ const CreateOrEditPage = (props) => {
   return (
     <div className="create-or-edit__bg fadeIn">
       <div className="create-or-edit__div">
-        <span className="create-or-edit__step__text"> {step}</span>
+        <span className="create-or-edit__step__text"> {stepCount}</span>
 
         <MdCancel
           className="create-or-edit__cancel__btn"
@@ -87,7 +73,7 @@ const CreateOrEditPage = (props) => {
         <div className="create-or-edit__step">
           <BsCaretLeftFill
             className="create-or-edit__step__btn"
-            onClick={() => stepHandler(-1, max, step, setStep)}
+            onClick={() => stepHandler(-1, maxStep, stepCount, setStepCount)}
             color="#4b45a0"
           />
 
@@ -95,12 +81,12 @@ const CreateOrEditPage = (props) => {
             handleChange={handleChange}
             values={values}
             errors={errors}
-            step={step}
+            step={stepCount}
           />
 
           <BsCaretRightFill
             className="create-or-edit__step__btn"
-            onClick={() => stepHandler(1, max, step, setStep)}
+            onClick={() => stepHandler(1, maxStep, stepCount, setStepCount)}
             color="#4b45a0"
           />
         </div>
