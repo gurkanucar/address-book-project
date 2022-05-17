@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./SearchComponent.css";
-import { countries } from "../../data/Countries";
+import { countries } from "../../data/countries";
 import ShowMoreComponent from "../ShowMoreComponent/ShowMoreComponent";
 import FilterComponent from "../FilterComponent/FilterComponent";
 import Input from "../Input/Input";
@@ -15,7 +15,7 @@ const SearchComponent = (props) => {
     gender,
     setGender,
     setRestricted,
-  } = props;
+  } = props.searchData;
 
   const [expand, setExpand] = useState(false);
 
@@ -35,7 +35,6 @@ const SearchComponent = (props) => {
         labelName="Search"
         hideError={true}
       />
-
       <FilterComponent
         expand={expand}
         searchedText={searchedText}
@@ -51,6 +50,7 @@ const SearchComponent = (props) => {
       <ShowMoreComponent
         className="search-component__show__more"
         setExpand={setExpand}
+        color="ae00ff"
         expand={expand}
       />
     </div>

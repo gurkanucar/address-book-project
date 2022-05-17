@@ -4,7 +4,7 @@ import "./ShowMoreComponent.css";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 
 const ShowMoreComponent = (props) => {
-  const { setExpand, expand, className } = props;
+  const { setExpand, expand, color, className } = props;
 
   return (
     <div
@@ -14,9 +14,9 @@ const ShowMoreComponent = (props) => {
       className={className || "show-more__root"}
     >
       {expand == true ? (
-        <MdKeyboardArrowUp size={40} />
+        <MdKeyboardArrowUp color={color || ""} size={40} />
       ) : (
-        <MdKeyboardArrowDown size={40} />
+        <MdKeyboardArrowDown color={color || ""} size={40} />
       )}
     </div>
   );

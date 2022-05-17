@@ -1,5 +1,5 @@
 import React from "react";
-import { countries } from "../../data/Countries";
+import { countries } from "../../data/countries";
 import SelectComponent from "../SelectComponent/SelectComponent";
 import "./FilterComponent.css";
 const FilterComponent = (props) => {
@@ -16,12 +16,12 @@ const FilterComponent = (props) => {
   } = props;
 
   const genderOptions = [
-    { value: "", text: "" },
+    { value: "", text: "...not selected" },
     { value: "male", text: "male" },
     { value: "female", text: "female" },
   ];
   const categoryOptions = [
-    { value: "", text: "" },
+    { value: "", text: "...not selected" },
     { value: "family", text: "family" },
     { value: "friend", text: "friend" },
     { value: "job", text: "job" },
@@ -30,7 +30,7 @@ const FilterComponent = (props) => {
     { value: "other", text: "other" },
   ];
 
-  const countryOptions = [{ value: "", text: "" }, ...countries];
+  const countryOptions = [{ value: "", text: "...not selected" }, ...countries];
 
   return (
     expand && (

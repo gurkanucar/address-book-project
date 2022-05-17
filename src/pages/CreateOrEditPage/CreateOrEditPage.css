@@ -1,29 +1,47 @@
-.create-or-edit__btn {
+.create-or-edit__bg {
+  min-height: 100vh;
   width: 100%;
-  user-select: none;
-  background-color: #f09814;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 18px;
-}
+  padding: 5vh 0 5vh 0;
 
-.create-or-edit__btn:hover {
-  background-color: #d68307;
+  /* Created with https://www.css-gradient.com */
+  background: #dec9ff;
+  background: -webkit-linear-gradient(top left, #dec9ff, #d6aaff);
+  background: -moz-linear-gradient(top left, #dec9ff, #d6aaff);
+  background: linear-gradient(to bottom right, #dec9ff, #d6aaff);
+  user-select: none;
 }
 
 .create-or-edit__div {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #f0f0f085;
   padding: 20px;
-  margin: 2%;
+  margin: 0 2% 0 2%;
   border-radius: 25px;
   display: flex;
   gap: 20px;
   flex-direction: column;
+}
+
+.create-or-edit__btn {
+  border-radius: 25px;
+  user-select: none;
+  border: none;
+  width: 10%;
+  padding: 10px 45px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  margin: 4px 2px 10px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: #fff;
+  background-color: #9941ff;
+}
+
+.create-or-edit__btn:hover {
+  color: #fff;
+  background-color: #8419ff;
 }
 
 .create-or-edit__step {
@@ -33,29 +51,53 @@
   align-items: center;
 }
 
+@media (max-width: 780px) {
+  .create-or-edit__form {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .create-or-edit__step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+  .create-or-edit__step__btn {
+    font-size: 80px !important;
+  }
+}
+
 .create-or-edit__step__btn {
+  font-size: 100px;
   cursor: pointer;
-  color: #f09814 !important;
+  color: #9941ff !important ;
 }
 
 .create-or-edit__step__btn:hover {
-  color: #d68307 !important;
+  color: #8419ff !important;
 }
 
 .create-or-edit__step__text {
   margin: 0;
   font-size: 25px;
   font-weight: 800;
+  color: #6c10ff;
 }
 
 .create-or-edit__cancel__btn {
   cursor: pointer;
   margin-left: auto;
   margin-right: 50px;
+  color: #9941ff;
 }
 
 .create-or-edit__cancel__btn:hover {
-  color: #bd1e1e !important;
+  color: #8419ff !important;
 }
 
 .create-or-edit__form {
@@ -68,8 +110,15 @@
 }
 
 .create-or-edit__form__col {
+  margin-bottom: 50px;
+  gap: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.create-or-edit__btn__wrapper {
+  display: flex;
+  justify-content: center;
 }

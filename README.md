@@ -1,6 +1,7 @@
 # Address Book React - Final Project
 
 #### Gurkan UCAR
+
 #### Trakya University, Computer Engineering
 
 &nbsp;
@@ -9,23 +10,28 @@
 
 [https://gurkanucar.github.io/address-book-project](https://gurkanucar.github.io/address-book-project)
 
+#### User credentials for testing
 
+```bash
+   username: grkn
+   password: pass
+```
 
-### Used Packages
+## Used Packages
 
 **Redux:** for global state management
 
-**Formik:** it helps to manage multiple inputs in form 
+**Formik:** it helps to manage multiple inputs in form
 
-**Yup:** for validation schemas 
+**Yup:** for validation schemas
 
-**React Icons:** there are many icons in this package 
+**React Icons:** there are many icons in this package
 
 **React Router:** You can navigate your pages using this package
 
 &nbsp;
 
-### How to run
+## How to run
 
 #### clone the project: https://github.com/gurkanucar/address-book-project.git
 
@@ -34,26 +40,24 @@
   cd address-book-project
 ```
 
- #### install the packages
+#### install the packages
 
 ```bash
   npm install
 ```
 
 #### run
-    
+
 ```bash
   npm start
 ```
 
 #### User credentials for testing
+
 ```bash
    username: grkn
    password: pass
 ```
-
-
-
 
 ## Example Images
 
@@ -75,3 +79,4 @@
 
 ![example](./images/ex9.png)
 
+![example](./images/ex10.png)

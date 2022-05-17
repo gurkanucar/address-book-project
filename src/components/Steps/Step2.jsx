@@ -1,5 +1,5 @@
 import React from "react";
-import { countries } from "../../data/Countries";
+import { countries } from "../../data/countries";
 import Input from "../Input/Input";
 import SelectComponent from "../SelectComponent/SelectComponent";
 
@@ -7,7 +7,7 @@ const Step2 = (props) => {
   const { handleChange, values, errors } = props;
 
   return (
-    <div className="create-or-edit__form">
+    <div className="create-or-edit__form fadeIn">
       <Input
         type="text"
         name="work_phone_number"

@@ -3,12 +3,14 @@ import "./CreateOrEditPage.css";
 
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+
+import Button from "../../components/Button/Button";
+
 import "./CreateOrEditPage.css";
 
 //formik
 import { useFormik } from "formik";
 //yup for validation scheme
-import * as Yup from "yup";
 
 import { validationSchema } from "../../util/validationSchema";
 import { newRecord } from "../../data/newRecord";
@@ -71,51 +73,46 @@ const CreateOrEditPage = (props) => {
   });
 
   return (
-    <div className="create-or-edit__div">
-      {/* <span>
-        CreateOrEditPage {props.isNew == true ? "NEW" : "EDIT " + params.id}
-      </span> */}
-      <span className="create-or-edit__step__text"> {step}</span>
+    <div className="create-or-edit__bg fadeIn">
+      <div className="create-or-edit__div">
+        <span className="create-or-edit__step__text"> {step}</span>
 
-      <MdCancel
-        className="create-or-edit__cancel__btn"
-        size={50}
-        onClick={() => {
-          navigate("/home");
-        }}
-        color="#f02b2b"
-      />
-
-      <div className="create-or-edit__step">
-        <BsCaretLeftFill
-          size={80}
-          className="create-or-edit__step__btn"
-          onClick={() => stepHandler(-1, max, step, setStep)}
-          color="#4b45a0"
+        <MdCancel
+          className="create-or-edit__cancel__btn"
+          size={50}
+          onClick={() => {
+            navigate("/home");
+          }}
         />
 
-        <MainForm
-          handleChange={handleChange}
-          values={values}
-          errors={errors}
-          step={step}
-        />
+        <div className="create-or-edit__step">
+          <BsCaretLeftFill
+            className="create-or-edit__step__btn"
+            onClick={() => stepHandler(-1, max, step, setStep)}
+            color="#4b45a0"
+          />
 
-        <BsCaretRightFill
-          size={80}
-          className="create-or-edit__step__btn"
-          onClick={() => stepHandler(1, max, step, setStep)}
-          color="#4b45a0"
-        />
+          <MainForm
+            handleChange={handleChange}
+            values={values}
+            errors={errors}
+            step={step}
+          />
+
+          <BsCaretRightFill
+            className="create-or-edit__step__btn"
+            onClick={() => stepHandler(1, max, step, setStep)}
+            color="#4b45a0"
+          />
+        </div>
+        <div className="create-or-edit__btn__wrapper">
+          <Button
+            onClick={handleSubmit}
+            className={"create-or-edit__btn"}
+            text="Save"
+          />
+        </div>
       </div>
-
-      <button
-        onClick={handleSubmit}
-        className="create-or-edit__btn"
-        type="submit"
-      >
-        Save
-      </button>
     </div>
   );
 };

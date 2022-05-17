@@ -9,29 +9,34 @@ import { BiShow } from "react-icons/bi";
 const ItemActions = (props) => {
   const { id, setId, setIsAlertModalOpen } = props;
   let navigate = useNavigate();
+  //#dfafff
   return (
     <div>
       <div className="item__actions">
         <BiShow
-          color="e48902"
+          className="item__action"
+          color="fff"
           onClick={() => {
             navigate("/addresses/details/" + id);
           }}
           size={25}
         />
         <MdEdit
+          className="item__action"
+          color="fff"
           onClick={() => {
             navigate("/addresses/edit/" + id);
           }}
           size={25}
         />
         <MdDelete
+          className="item__action"
           onClick={() => {
             setIsAlertModalOpen(true);
             setId(id);
           }}
           size={25}
-          color={"#f2493d"}
+          color={"fff"}
         />
       </div>
     </div>

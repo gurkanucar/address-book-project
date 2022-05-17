@@ -3,21 +3,14 @@ import { dateConverter } from "../../util/dateConverter";
 import Input from "../Input/Input";
 import { FaUser } from "react-icons/fa";
 import SelectComponent from "../SelectComponent/SelectComponent";
+import UserImageComponent from "../ImageComponent/UserImageComponent";
 
 const Step3 = (props) => {
   const { handleChange, values, errors } = props;
 
   return (
-    <div className="create-or-edit__form__col">
-      {values.imageUrl !== "" ? (
-        <img
-          src={values.imageUrl}
-          style={{ marginBottom: "40px" }}
-          className="summary__img"
-        />
-      ) : (
-        <FaUser style={{ marginBottom: "40px" }} size={180} />
-      )}
+    <div className="create-or-edit__form__col fadeIn">
+      <UserImageComponent color="b15fd6" img={values.imageUrl} />
       <div className="create-or-edit__form">
         <Input
           type="text"

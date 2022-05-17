@@ -21,6 +21,7 @@ const List = (props) => {
 
   return (
     <div className="list__root">
+      <div className="list__data">
       {datas.map((item, index) => {
         return (
           <ListItem
@@ -31,6 +32,7 @@ const List = (props) => {
           />
         );
       })}
+      </div>
       {isAlertModalOpen && (
         <AlertModal id={id} setIsAlertModalOpen={setIsAlertModalOpen} />
       )}

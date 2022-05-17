@@ -3,18 +3,18 @@ import * as Yup from "yup";
 
 export const validationSchema = () => {
   return Yup.object({
-    first_name: Yup.string().required("Zorunlu alan"),
-    last_name: Yup.string().required("Zorunlu alan"),
+    first_name: Yup.string().required("Zorunlu alan*"),
+    last_name: Yup.string().required("Zorunlu alan*"),
     email: Yup.string()
       .email("Geçersiz e-mail adresi")
-      .required("Zorunlu alan"),
+      .required("Zorunlu alan*"),
     gender: Yup.string(),
-    job: Yup.string().required("Zorunlu alan"),
-    phone_number: Yup.string().required("Zorunlu alan"),
+    job: Yup.string().required("Zorunlu alan*"),
+    phone_number: Yup.string().required("Zorunlu alan*"),
     work_phone_number: Yup.string(),
     home_phone_number: Yup.string(),
     country: Yup.string(),
-    city: Yup.string().required("Zorunlu alan"),
+    city: Yup.string().required("Zorunlu alan*"),
     home_address: Yup.string(),
     work_address: Yup.string(),
     facebook: Yup.string(),
@@ -26,7 +26,7 @@ export const validationSchema = () => {
     category: Yup.string(),
     created: Yup.date(),
     color: Yup.string(),
-    birth_date: Yup.date().required("Zorunlu alan"),
+    birth_date: Yup.date().required("Zorunlu alan*"),
     place_of_birth: Yup.string(),
     imageUrl: Yup.string(),
   });

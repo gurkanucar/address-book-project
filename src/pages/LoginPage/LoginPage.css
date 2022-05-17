@@ -1,38 +1,62 @@
-.login-page__div {
+.login-page-bg {
+  height: 100vh;
+  width: 100%;
+
+  /* Created with https://www.css-gradient.com */
+  background: #dab1f9;
+  background: -webkit-linear-gradient(top left, #dab1f9, #9823ce);
+  background: -moz-linear-gradient(top left, #dab1f9, #9823ce);
+  background: linear-gradient(to bottom right, #dab1f9, #9823ce);
+}
+
+.login-page__wrapper {
   display: flex;
   min-width: 350px;
   margin: 20vh 10% 0 10%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
+}
+
+.login-page__div {
+  display: flex;
+  margin: 15vh 10%;
+  min-width: 300px;
+  width: 30%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0c9;
   padding: 20px;
   border-radius: 25px;
 }
 
-.login-page__login__btn {
-  width: 150px;
-  user-select: none;
-  background-color: #f09814;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.login-page__login__btn:hover {
-  background-color: #d68307;
-}
-
 .login-page__title {
   margin-bottom: 50px;
+  color: #6c10ff;
 }
 
 .login-page__error {
-  color: #ff2d2d;
+  color: #4804b4;
   font-weight: 700;
   margin: 0 0 40px 0;
+  white-space: pre-wrap;
+}
+
+.fadeIn {
+  animation: fadeInAnimation 0.3s linear;
+}
+
+.fadeOut {
+  animation: fadeOutAnimation 0.4s linear;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

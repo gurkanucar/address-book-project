@@ -1,10 +1,10 @@
 export const searchFilter = (arr, text) => {
-  console.log("text filter", text);
+  // console.log("text filter", text);
   return arr.filter((x) => textSearch(x, text));
 };
 
 export const searchFilterRestrict = (arr, text, category, country, gender) => {
-  console.log("restrict filter", text, category, country, gender);
+  //console.log("restrict filter", text, category, country, gender);
   return arr.filter(
     (x) =>
       textSearch(x, text) &&
