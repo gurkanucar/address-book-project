@@ -8,7 +8,7 @@
 
 ## Live Demo
 
-[https://gurkanucar.github.io/address-book-project](https://gurkanucar.github.io/address-book-project)
+[https://address-book.gurkanucar.com](https://address-book.gurkanucar.com)
 
 #### User credentials for testing
 
