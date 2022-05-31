@@ -21,7 +21,7 @@ const Input = (props) => {
         {labelName}
       </label>
       <input
-        id={id || ""}
+        id={id || Math.random().toString()}
         onKeyPress={onKeyPress}
         className="input-component__input"
         type={type || "text"}
