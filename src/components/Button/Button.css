@@ -1,6 +1,7 @@
 @import "../../../src/vars.css";
 
 .button-bg {
+  user-select: none;
   border-radius: 25px;
   border: none;
   padding: 10px 45px;
