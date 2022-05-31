@@ -3,9 +3,10 @@ import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 
 import "./DetailPage.css";
-import { FaUser, FaChevronCircleLeft } from "react-icons/fa";
+import { FaChevronCircleLeft } from "react-icons/fa";
 
 import DetailListComponent from "../../components/DetailListComponent/DetailListComponent";
+import UserImageComponent from "../../components/ImageComponent/UserImageComponent";
 
 const DetailPage = (props) => {
   let params = useParams();
@@ -30,6 +31,7 @@ const DetailPage = (props) => {
         setData(item);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -44,18 +46,11 @@ const DetailPage = (props) => {
         </div>
 
         <div className="details-page__root">
-          <div className="details-page__img">
-            {data?.imageUrl !== "" ? (
-              <img
-                src={data?.imageUrl}
-                style={{ height: 250, width: 250 }}
-                className="summary__img"
-              />
-            ) : (
-              <FaUser style={{ marginBottom: "40px" }} size={250} />
-            )}
-          </div>
-
+          <UserImageComponent
+            className="details-page__img"
+            color="b15fd6"
+            img={data?.imageUrl}
+          />
           <DetailListComponent data={data} />
         </div>
       </div>
