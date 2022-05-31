@@ -19,14 +19,10 @@ export const sortBirthdays = (arr) => {
 
 const sortFunction = (a, b) => {
   let flag = 0;
-  if (a.getMonth() > b.getMonth()) {
-    flag = -1;
-  } else if (a.getDate() > b.getDate() && a.getMonth() == b.getMonth()) {
-    flag = -1;
-  } else if (
-    a.getDate() == b.getDate() &&
-    a.getMonth() == b.getMonth() &&
-    a.getFullYear() > b.getFullYear()
+  if (
+    monthGreaterThan(a, b) ||
+    dateGreaterThan(a, b) ||
+    yearGreaterThan(a, b)
   ) {
     flag = -1;
   }
@@ -43,7 +39,7 @@ const compare = (date, startDate, endDate) => {
     if (
       !(
         date.getDate() < startDate.getDate() &&
-        date.getMonth() == startDate.getMonth()
+        date.getMonth() === startDate.getMonth()
       )
     ) {
       flag = true;
@@ -51,4 +47,20 @@ const compare = (date, startDate, endDate) => {
   }
 
   return flag;
+};
+
+const monthGreaterThan = (a, b) => {
+  return a.getMonth() > b.getMonth();
+};
+
+const dateGreaterThan = (a, b) => {
+  return a.getDate() > b.getDate() && a.getMonth() === b.getMonth();
+};
+
+const yearGreaterThan = (a, b) => {
+  return (
+    a.getDate() === b.getDate() &&
+    a.getMonth() === b.getMonth() &&
+    a.getFullYear() > b.getFullYear()
+  );
 };
