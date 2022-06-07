@@ -18,6 +18,9 @@ const textSearch = (x, text) => {
   return (
     x.first_name.toLowerCase().includes(text) ||
     x.last_name.toLowerCase().includes(text) ||
+    (x.first_name.toLowerCase() + " " + x.last_name.toLowerCase()).includes(
+      text
+    ) ||
     x.job.toLowerCase().includes(text) ||
     x.email.toLowerCase().includes(text) ||
     x.phone_number.toLowerCase().includes(text) ||
