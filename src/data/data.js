@@ -85,7 +85,7 @@ export const data = [
     birth_date: generateBirthDay(),
     place_of_birth: "Konya",
     imageUrl:
-      "https://im.haberturk.com/2021/02/28/ver1614509182/2988727_020dd7102e179a6c17a4ace49f2ec177.jpg",
+      "https://img-s1.onedio.com/id-57ad8b724010f057291fdaf3/rev-0/w-600/h-450/f-jpg/s-5a69294e7128f30b1afdf9c1072fd265ede0b75f.jpg",
   },
   {
     id: 4,
