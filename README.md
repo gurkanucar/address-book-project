@@ -6,6 +6,10 @@
 
 &nbsp;
 
+## Slide
+
+[https://github.com/gurkanucar/address-book-project/raw/master/1191602003-address-book-slide.pptx](https://github.com/gurkanucar/address-book-project/raw/master/1191602003-address-book-slide.pptx)
+
 ## Live Demo
 
 [https://address-book.gurkanucar.com](https://address-book.gurkanucar.com)
